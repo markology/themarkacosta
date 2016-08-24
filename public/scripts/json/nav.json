@@ -1,0 +1,6 @@
+[
+      {"icon": "fa-home", "option": "Home", "url": "/Home"},
+      {"icon": "fa-user", "option": "About", "url": "/About"},
+      {"icon": "fa-code", "option": "Skills", "url": "/Skills"},
+      {"icon": "fa-file-image-o", "option": "Work", "url": "/Work"},
+      {"icon": "fa-envelope", "option": "Contact", "url": "/Contact"}]

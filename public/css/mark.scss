@@ -1,0 +1,203 @@
+@import 'partials/app';
+@import 'partials/about';
+@import 'partials/skills';
+@import 'partials/projects';
+@import 'partials/nav';
+@import 'partials/contact';
+@import 'partials/home';
+
+@import 'https://fonts.googleapis.com/css?family=La+Belle+Aurore';
+
+@font-face {
+    font-family: Azedo;
+    src: url(fonts/Azedo-Bold.otf);
+    font-weight: 600;
+}
+@font-face {
+    font-family: Azedo;
+    src: url(fonts/Azedo-Light.otf);
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: pier;
+    src: url(fonts/pier-bold.otf);
+    font-weight: 600;
+}
+// @font-face {
+//     font-family: pier;
+//     src: url(fonts/pier-bold-italic.otf);
+//     font-weight: 600;
+//     font-style: italic;
+// }
+@font-face {
+    font-family: pier;
+    src: url(fonts/pier-regular.otf);
+    font-weight: 500;
+}
+// @font-face {
+//     font-family: pier;
+//     src: url(fonts/pier-italic.otf);
+//     font-weight: 500;
+//     font-style: italic;
+// }
+
+@import 'https://fonts.googleapis.com/css?family=Reem+Kufi';
+
+html, body, #the-mark-acosta, #content{
+    margin: 0px;
+    height: 100%;
+	overflow:hidden;
+}
+
+body{
+	// overflow: hidden;
+}
+
+#the-mark-acosta{
+    overflow: hidden;
+}
+
+#content{
+    padding: 8px 12px;
+	padding-left:72px;
+	background: #232323;
+
+}
+
+#particlesjs{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+#load{
+	position :absolute;
+	top: 0;
+	left: -100%;
+	height: 100%;
+	width: 100%;
+	background: #232323; 
+	color:black;
+	text-align: center;
+	padding-top: 50vh;
+	z-index: 998;
+
+	#load-text{
+	    color: white;
+	    font-family: Azedo;
+	    letter-spacing: 6px;		
+	}
+
+	#load-brand{
+    width: 200px;
+    margin: auto;
+    Position: relative;
+    height: 100px;
+    margin-top: -107px;
+		svg{
+	    display: block;
+	    margin: auto;
+	    position: absolute;
+	    top: -31px;
+	    left: 38px;
+		}
+	}
+
+	#progress-bar{
+		width: 300px;
+		height: 10px;
+		background: gray;
+		display:block;
+		margin:auto;
+
+		#progress{
+		    width: 0%;
+		    height: 10px;
+		    display: block;
+		    background: #ee5b96;
+		}
+	}
+
+}
+
+#content-cover{
+    position: absolute;
+    top: 0;
+    left: 0;
+    display:none;
+    background: #232323;
+    height: 100%;
+    width: 100%;
+    z-index: 997;		
+}
+
+.rubberBand{
+    -webkit-animation-name: rubberBand;
+    animation-name: rubberBand;
+      animation-duration: 1.2s;
+
+}
+
+@-webkit-keyframes rubberBand {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+
+  30% {
+    -webkit-transform: scaleX(1.25) scaleY(0.75);
+    transform: scaleX(1.25) scaleY(0.75);
+  }
+
+  40% {
+    -webkit-transform: scaleX(0.75) scaleY(1.25);
+    transform: scaleX(0.75) scaleY(1.25);
+  }
+
+  60% {
+    -webkit-transform: scaleX(1.15) scaleY(0.85);
+    transform: scaleX(1.15) scaleY(0.85);
+  }
+
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+@keyframes rubberBand {
+  0% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+
+  30% {
+    -webkit-transform: scaleX(1.25) scaleY(0.75);
+    -ms-transform: scaleX(1.25) scaleY(0.75);
+    transform: scaleX(1.25) scaleY(0.75);
+  }
+
+  40% {
+    -webkit-transform: scaleX(0.75) scaleY(1.25);
+    -ms-transform: scaleX(0.75) scaleY(1.25);
+    transform: scaleX(0.75) scaleY(1.25);
+  }
+
+  60% {
+    -webkit-transform: scaleX(1.15) scaleY(0.85);
+    -ms-transform: scaleX(1.15) scaleY(0.85);
+    transform: scaleX(1.15) scaleY(0.85);
+  }
+
+  100% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+}

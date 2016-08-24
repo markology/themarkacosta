@@ -1,0 +1,114 @@
+
+#about{
+
+	span{
+	    position: absolute;
+	    color: white;
+	    font-family: "Trebuchet MS", Helvetica, sans-serif;
+	    font-weight: 100;
+	    font-size: .75rem;
+	    width: 600px;
+	    line-height: 1.4;
+	    letter-spacing: 1px;
+
+	    &#coder
+		{
+    		top: calc(194px + 21vh);
+		    left: 130px;
+		    z-index: 994;
+		    padding-top: 23px;
+		    h3{
+			    z-index: 994;
+			    position: absolute;
+			    top: 0;		    	
+		    }				    
+		    span{
+			    display: inline-block;
+			    position: relative;
+			    color: #ee5b96;
+			    z-index: 993;
+			    cursor: pointer;
+			    font-weight: 600;
+			    width: auto;   	
+		    }		    
+		}	
+
+	    &#person
+		{
+		    top: 24vh;
+		    left: 130px;
+		    z-index: 994;
+		    padding-top: 23px;
+		    h3{
+			    z-index: 994;
+			    position: absolute;
+			    top: 0;		    	
+		    }		    
+		}			
+	}
+
+	h1{
+		font-family: pier;
+	    font-size: 60px;
+	    position: absolute;
+	    color: white;
+	    top: 7vh;
+	    left: 130px;
+		z-index: 994;
+		cursor:default;	 
+	    span{
+		    display: inline-block;
+		    position: relative;
+		    font-family: pier;
+		    font-size: 60px;
+		    /* position: absolute; */
+		    color: white;
+		    /* top: 7vh; */
+			opacity: 0;   
+		    width: auto;	    	
+			transition: color .1s ease,transform .3s ease;	
+			// transform: translateX(-600px);
+
+    		&:hover{
+    			color: #ee5b96;
+    			transition: color .1s ease;	
+    		}	
+    	}
+	}
+
+	h3{
+	    margin-bottom: -8px;
+	    color: #6ee3ff;		
+	}
+
+	#moon{
+	    background: white;
+	    height: 353px;
+	    width: 370px;
+	    display: block;
+	    position: absolute;
+	    padding-top: 20px;
+	    border-radius: 50%;
+    	z-index: 9;	 
+    	right: 48px;
+    	margin-top: calc(29vh - 100px);    	   	
+	    #bug-lord{
+		    height: 600px;
+		    position: absolute;
+		    right: 28px;
+		    top: -117px;
+		    z-index: 996;
+		    transform: scale(.41);
+    		right: -188px;		    
+	    }	
+	    #hill{
+		    position: absolute;
+		    right: -54px;
+		    top: 270px;
+		    z-index: 995;
+		    height: 505px;
+		    z-index: 995;
+	    	right: -188px;
+	    }
+	}
+}
