@@ -12,6 +12,10 @@ import {gunk , drawText, positionParticles} from './plugins/gunk.js';
 import {particle} from './plugins/particle.js';
 import {load} from './plugins/load.js';
 
+
+
+
+
 class TheMarkAcosta extends React.Component {
 
   constructor(props) {
@@ -55,9 +59,9 @@ class TheMarkAcosta extends React.Component {
       positionParticles(this);
 
 
-  setTimeout(() => {
-    load();
-  }, 200)      
+      setTimeout(() => {
+          load();
+        }, 200)      
 
     } 
 
@@ -82,7 +86,7 @@ class TheMarkAcosta extends React.Component {
     }
   	else if( this.state.activeItem == "Contact"){
       $($('canvas')[1]).hide() ; 		
-      h = <Contact />
+      h =  <Contact />  
     }
   	else{h = <h1>Invalid Choice</h1>}  		  		  	
 

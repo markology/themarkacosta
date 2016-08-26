@@ -1,0 +1,175 @@
+#contact{
+  h1{
+      font-family: pier;
+      font-size: 60px;
+      position: absolute;
+      color: white;
+      top: 7vh;
+      left: 130px;
+      z-index: 994;
+      cursor:default;  
+      span{
+        display: inline-block;
+        position: relative;
+        font-family: pier;
+        font-size: 60px;
+        /* position: absolute; */
+        color: white;
+        /* top: 7vh; */
+        opacity: 0;   
+        width: auto;        
+        transition: color .1s ease,transform .3s ease;  
+      // transform: translateX(-600px);
+
+        &:hover{
+          color: #ee5b96;
+          transition: color .1s ease; 
+        } 
+      }
+  }
+
+	#selfie{
+    height: 100%;
+    width: 48vw;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-image: url("/assets/selfie3.jpg");
+    background-size: cover;
+    background-position: right;
+    background-repeat: no-repeat;
+    border-left: 3px solid white;
+	}
+
+	.moneyz{
+    position: absolute;
+    top: 30vh;
+    left: 130px;
+    background: rgb(200, 81, 128);
+    z-index: 995;
+    padding: 2px;
+    box-shadow: 0px 2px 7px 0px rgba(0, 0, 0, 0.57);
+    
+    #phone{
+      color: white;
+      font-family: pier;
+      position: absolute;
+      left: 13px;
+      bottom: 1px;
+      font-size: .7rem;
+    }
+
+    #error{
+      background: #e67575;
+      color: #ffffff !important;
+      height: 37px !important;
+      width: 200px;
+      text-align: left;
+      font-size: 1.2rem;
+      border-radius: 2px;
+      position: absolute;
+      font-family: pier;
+      bottom: -423px;
+      left: 59px;
+      transition: bottom 1s ease;
+      padding: 28px 5px 36px 20px !important;
+
+      &.retract{
+        bottom: 123px!important;
+        transition: bottom 1s ease;        
+      }
+
+     
+      &.error{
+        background: #e67575;
+        color: #fff!important;
+        bottom: 123px!important;
+        transition: bottom 1s ease;          
+      }
+
+      &.load{
+        bottom: 123px!important;
+        bottom: 123px!important;
+        transition: bottom 1s ease;
+        background: #6ee3ff!important;          
+      }       
+      &.success{
+        color: white!important;
+        background: #76bf64!important; 
+        bottom: 123px!important;
+        transition: bottom 1s ease;                 
+      }            
+    }
+
+    &#sms{
+      left: 500px;
+    }
+
+    .hireus{
+      background: rgb(200, 81, 128);
+      padding: 0px;
+      text-align: right;
+      padding: 2px;   
+      
+      button{
+        display: inline-block;
+        background: rgb(35, 35, 35);
+        border: none;
+        height: 33px;
+        padding: 5px 15px;
+        color: white;
+        border-radius: 2px;
+        box-shadow: 0px 2px 8px 1px rgba(0, 0, 0, 0.44);
+        outline: none;        
+        margin: 4px;  
+        cursor: pointer;      
+      }         
+    }   
+
+    input, textarea{
+      display: block;
+      background: rgb(35, 35, 35);
+      border: none;
+      height: 33px;
+      width: 400px;
+      padding: 5px 15px;
+      margin-bottom: 11px;
+      color: white;
+      border-radius: 2px;
+      box-shadow: 0px 2px 8px 1px rgba(0, 0, 0, 0.44);
+      outline: none;
+
+      &:nth-of-type(3n+1):focus{
+        & ~ .underline:nth-of-type(3n+1){
+          width: 100%;
+          transition: width .3s ease;
+        }
+      }     
+      &:nth-of-type(3n+2):focus{
+        & ~ .underline:nth-of-type(3n+2){
+          width: 100%;
+          transition: width .3s ease;
+        }
+      }                     
+    }
+
+    textarea{
+      height: 230px!important;
+      &:focus{
+        & ~ .underline:nth-of-type(3n+3){
+          width: 100%!important;
+          transition: width .3s ease;
+        }
+      }   
+    }
+
+    .underline{
+      height: 2px;
+      background: #ffffff;
+      width: 0%;
+      transition: width .3s ease;
+      margin-top: -10px;
+      margin-bottom: 10px;
+    }
+  }
+}

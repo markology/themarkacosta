@@ -1,6 +1,9 @@
-export function load(){
 
-    $('#load').velocity({left: '0%' }, {complete: function(){
+var l = false;
+export function load(){
+if(!l){
+	l = true;
+    $('#load').velocity('stop').velocity({left: '0%' }, {complete: function(){
 
 
     	$('#progress').velocity({width: '100%'},{duration:1300,
@@ -11,6 +14,7 @@ export function load(){
 
 		    		$('#load').css('left', '-100%');
 		    		$('#progress').css('width', '0%');
+		    		l = false;
 	    		}
 	    	}, mina.ease);
 	    }
@@ -18,5 +22,6 @@ export function load(){
 	  
 
 	}});
+}
 
 }

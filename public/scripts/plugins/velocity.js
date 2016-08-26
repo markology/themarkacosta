@@ -1,5 +1,103 @@
 import velocity from './../../js/velocity.min.js'
 
+// export function bubbles(){
+// 	var r = '10vw';
+// 	var v = '-25vw';
+// 	var t1 = '-50vw';
+
+// 	$('.project').each(function(){
+
+// 		$(this).on('click', function(){
+// 			if(!$(this).hasClass('active')) {
+// 				var z1 = $(this).attr('id') 
+// 				var x1 = '0vw';		
+// 				console.log(z1)				
+// 				if(z1 == 'VU')
+// 					x1 = v;
+// 				if(z1 == 'Razu')
+// 					x1 = r;
+// 				if(z1 == "Tell")
+// 					x1 = t1;					
+// 				$('.project').removeClass('active');
+// 				$('.project').removeClass('bottom-orbit');
+// 				$('.project').removeClass('top-orbit');
+// 				$(this).addClass('active')
+// 				$(this).velocity({
+// 					translateX: x1
+// 				});		
+
+// 				var t = 0;
+// 				$('.project').each(function(){
+// 					if(!$(this).hasClass('active') && t < 2){
+// 							var z = $(this).attr('id') 
+// 							var x = '0vw';		
+// 							// console.log(z)				
+
+// 							if(z == 'VU')
+// 								x = v;
+// 							if(z == 'Razu')
+// 								x = r;
+// 							if(z == "Tell")
+// 								x = t1;	
+
+// 						if(t == 0){
+
+// 							$(this).addClass('top-orbit');
+							
+// 							$(this).velocity({
+// 								translateX: x
+// 							});						
+// 						}
+// 						else{
+// 							$(this).addClass('bottom-orbit');						
+// 							$(this).velocity({
+// 								translateX: x
+// 							});						
+// 						}
+// 						t++;						
+// 					}
+// 				})
+// 			}
+// 		})
+
+// 	})
+// }
+
+export function bubbles(){
+
+	$('.project').each(function(){
+
+		$(this).on('click', function(){
+			if(!$(this).hasClass('active')) {
+					
+				$('.project').removeClass('active');
+				$('.project').removeClass('bottom-orbit');
+				$('.project').removeClass('top-orbit');
+				$(this).addClass('active')
+
+
+				var t = 0;
+				$('.project').each(function(){
+					if(!$(this).hasClass('active') && t < 2){
+				
+						if(t == 0){
+
+							$(this).addClass('top-orbit');
+	
+						}
+						else{
+							$(this).addClass('bottom-orbit');						
+	
+						}
+						t++;						
+					}
+				})
+			}
+		})
+
+	})
+}
+
 
 export function bars(){
 	var skills = ['230px','270px', '250px', '240px', '280px', '220px'];
@@ -15,6 +113,40 @@ export function bars(){
 	})
 }
 
+export function button(){
+	$('#email').click(function(){
+	    $(this).addClass('rubberBandLight').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+	      $(this).removeClass('rubberBandLight')
+	    });
+	  })	
+}
+
+
+export function lines(){
+	  
+	var words = $('#line').text().split(' ');
+	var spans = [];
+
+	for(var x in words){
+		var t = document.createElement('span');
+		var newContent = document.createTextNode(words[x] + ' '); 
+		t.appendChild(newContent);
+		spans.push(t); 
+
+	}
+	$('#line').html('');
+	console.log(spans)
+	for(var x  in spans){
+		$(spans[x]).mouseover(function(){
+		    $(this).addClass('rubberBandLight').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+		      $(this).removeClass('rubberBandLight')
+		    });
+		  })
+		$('#line').prepend(spans[spans.length - x- 1]);
+	}
+	  	
+
+}
 
 export function anim(elem, charLength, del){
 
@@ -40,18 +172,14 @@ export function anim(elem, charLength, del){
 
 				});
 
-
-					
-
-
 			
 		}
 
-		if(charLength > 0){
+		if(charLength > 0 && charLength < 200){
 
 		  for( var x =0; x < charLength; x++){
 	
-			  $($(elem).children('span')[x]).mouseover(function(){
+			 $($(elem).children('span')[x]).mouseover(function(){
 			    $(this).addClass('rubberBand').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
 			      $(this).removeClass()
 			    });
@@ -59,6 +187,13 @@ export function anim(elem, charLength, del){
 		  }	
 
 		  update();
+		}
+		else if(charLength >= 200){
+			$(elem).mouseover(function(){
+			    $(this).addClass('rubberBandLight').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+			      $(this).removeClass()
+			    });
+			  })				
 		}
 		else{
 			$(elem).mouseover(function(){

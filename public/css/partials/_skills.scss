@@ -55,7 +55,7 @@
 	    position: absolute;
 	    top: calc(7vh - 28px);	    
 	    z-index: 995;
-	    left: 400px;
+    	left: calc(379px + 7vw);
 	    height: 400px;
 
 		.chart{
@@ -111,7 +111,7 @@
     position: absolute;
     height: 200px;
     display: block;
-    left: 392px;
+    left: calc(365px + 7vw);
     top: calc(285px - -21vh);
 
     & > div{

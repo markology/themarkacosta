@@ -1,0 +1,293 @@
+#projects{
+  h1{
+      font-family: pier;
+      font-size: 60px;
+      position: absolute;
+      color: white;
+      top: 7vh;
+      left: 130px;
+      z-index: 994;
+      cursor:default; 
+      span{
+        display: inline-block;
+        position: relative;
+        font-family: pier;
+        font-size: 60px;
+        /* position: absolute; */
+        color: white;
+        /* top: 7vh; */
+        opacity: 0;   
+        width: auto;        
+        transition: color .1s ease,transform .3s ease;  
+      // transform: translateX(-600px);
+
+        &:hover{
+          color: #ee5b96;
+          transition: color .1s ease; 
+        } 
+      }       
+	}
+
+
+
+	.project{
+	    position: absolute;
+	    width: 26vw;
+	    height: 26vw;
+	    top: 31vh;
+	    border-radius: 50%;
+	    overflow:hidden;
+	    box-shadow: 0px 0px 10px 3px black inset, 0px 0px 0px 4px #e1be2c, 0px 0px 11px 3px black;
+	    z-index: 995;
+    	box-shadow: 0px 0px 0px 4px #e1be2c inset,0px 0px 10px 6px black inset;
+    	&:hover{
+			    // -webkit-animation-name: breatheLight;
+			    // animation-name: breatheLight;
+		     //  	animation-duration: 1.2s;	   
+		     //  	-webkit-animation-iteration-count: infinite; 	
+		     //  	animation-iteration-count: infinite; 	    		
+    		& > span{
+			    transform: scale(1.1);
+			    transition: transform 0.3s ease;    			
+    		}
+    	}
+
+    	& > span{
+			z-index: 993;
+		    position: absolute;
+		    top: 0;
+		    left: 0;
+		    height: 100%;
+		    width: 100%;
+		    // background: rgba(110, 227, 255, 0.81);
+		    /* margin: 24px; */
+		    text-align: center;
+		    color: #6ee3ff;
+		    font-family: pier;
+		    text-shadow: -2px 2px 2px #181818;
+		    font-size: 2rem;
+		    z-index: 993;
+		    border-radius: 50%;
+		    /* margin: 60px; */
+		    height: 26vw;
+		    // box-shadow: 0px 0px 0px 4px #e1be2c inset;
+		    width: 26vw;    	
+		    transform: scale(0);
+		    transition: transform 0.3s ease;
+		    cursor: pointer;		    	
+		    p{
+    			margin-top: 42%;	
+			    -webkit-animation-name: breathe;
+			    animation-name: breathe;
+		      	animation-duration: 1.2s;	   
+		      	-webkit-animation-iteration-count: infinite; 	
+		      	animation-iteration-count: infinite; 	
+		    }
+    	}
+	    h2{
+		    font-family: Azedo;
+		    color: #ca5282;
+		    text-shadow: 0px 1px 2px black;
+		    /* position: absolute; */
+		    top: 0;
+		    left: 13px;
+		    background: rgb(255, 255, 255);
+		    padding: 2px 5px;
+		    border-radius: 2px;
+		    box-shadow: 0px 4px 6px 0px black;
+		    /* z-index: -1; */
+		    text-align: center;
+		    padding-bottom: 9px;
+			background: radial-gradient(gainsboro 1%, white 58%, gray 88%, black 137%);		    
+		    background: linear-gradient(to right,black 9%, gray 13%,white 24%,white 76%,gray 87%, black 91%);
+	    }
+
+	    &.active{
+   //  		left: 150px!important;	 
+    		transition: left .6s ease, transform .5s ease;   				
+			z-index: 3;
+			animation: none;
+
+	    	&#Razu{
+	    		transform: translateX(0vw) scale(1);
+	    	}
+
+	    	&#Tell{
+	    		transform: translateX(-60vw) scale(1);	    		
+	    	}
+
+	    	&#VU{
+	    		transform: translateX(-30vw) scale(1);	    		
+	    	}				
+	    }
+
+	    &.top-orbit{
+	    	z-index: 2;
+	    	animation: none;
+
+	    	&#Razu{
+	    		transform: scale(0);
+	    	}
+
+	    	&#Tell{
+	    		transform: scale(0);	    		
+	    	}
+
+	    	&#VU{
+	    		transform: scale(0);	    		
+	    	}	    		    	
+   	
+	    }
+
+	    &.bottom-orbit{
+	    	z-index:1;
+	    	animation: none;
+
+	    	&#Razu{
+	    		transform: scale(0);
+	    	}
+
+	    	&#Tell{
+	    		transform: scale(0);	    		
+	    	}
+
+	    	&#VU{
+	    		transform: scale(0);	    		
+	    	}		    	
+      			    	
+	    }
+
+		&#Razu{
+			background-image:url('/assets/razu.png');
+			background-size: cover;
+			background-position:center;
+			left: 132px;
+    		transition: left .6s ease, transform .5s ease;
+    		background-position: left;    		   				
+		}
+
+		&#VU{
+			background-image:url('/assets/vu.png');
+			background-size: cover;
+			background-position:center;
+			left: calc(132px + 30vw);
+    		transition: left .6s ease, transform .5s ease;
+    		background-position: left;    		   				
+		}
+
+		&#Tell{
+			background-image:url('/assets/tree.png');
+			background-size: cover;
+			background-position:center;
+			left: calc(132px + 60vw);
+    		transition: left .6s ease, transform .5s ease;
+    		background-position: left;    		   				
+
+		}				
+	}
+	#close{
+	    z-index: 999;
+	    color: #ffffff;
+	    position: absolute;
+	    top: 3vh;
+	    right: 5vw;
+	    font-size: 1.5rem;
+	    font-family: pier;
+	    text-shadow: 1px 2px 1px black;
+	    background: #ca5282;
+	    height: 36px;
+	    width: 36px;
+	    border-radius: 50%;
+	    box-shadow: 1px 1px 3px 1px black;
+	    text-align: center;
+		transform: scale(0);
+		transition: transform .5s ease;
+		cursor:pointer;
+
+
+		&.open{
+			transform: scale(1);
+			transition: transform .5s ease;			
+			&:hover{
+				transform: scale(1.1);
+				transition: transform .5s ease;			
+			}
+		}
+
+	}
+}
+
+#project-container{
+    transform: translateX(100vw);
+    position: relative;
+    display: block;	
+
+    &.enable{
+    	transform: translateX(0vw);
+    }
+}
+.top{
+	background-position:center;
+	background-size: cover;
+	height: 50%;
+	width: 100%;
+	display: block;
+}
+.bottom{
+	height: 50%;
+	width: 100%;
+	display: block;	
+}
+
+.right{
+	width:50%;
+	float:right;
+	height: 100%;
+}
+
+.left{
+	width:50%;
+	float:left;
+	height: 100%;
+}
+
+#razu-project{
+	width:70vw;
+	height: 70vh;
+	overflow: hidden;
+	text-align: left;
+
+	#slider{
+		width:280vw;
+		height: 100%;
+
+		.slide{
+			width: 70vw;
+			display:inline-block;
+			// float:left;
+		}
+	}
+	#encapsulation{
+		.top{
+			background-image:url('/assets/encapsulation.png')
+		}
+	}
+
+	#sockets{
+		.top{
+			background-image:url('/assets/sockets.png')
+		}
+	}
+
+	#API{
+		.top{
+			background-image:url('/assets/API.png')
+		}
+	}
+
+	#UI{
+		.top{
+			background-image:url('/assets/UI.png')
+		}
+	}			
+}

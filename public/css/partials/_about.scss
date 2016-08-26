@@ -1,27 +1,33 @@
 
 #about{
-
-	span{
+	#line{
+		span{
+		    display: inline-block;
+		    margin-left: 5px;			
+		}
+	}
+	& > span{
 	    position: absolute;
 	    color: white;
-	    font-family: "Trebuchet MS", Helvetica, sans-serif;
-	    font-weight: 100;
-	    font-size: .75rem;
+	    font-family: 'Quicksand', sans-serif;
+	    font-weight: 500;
+	    font-size: .9rem;
 	    width: 600px;
 	    line-height: 1.4;
-	    letter-spacing: 1px;
+	    letter-spacing: 0px;
+	    text-shadow: 0px 0px;
 
 	    &#coder
 		{
-    		top: calc(194px + 21vh);
+    		top: calc(194px + 24vh);
 		    left: 130px;
 		    z-index: 994;
 		    padding-top: 23px;
 		    h3{
 			    z-index: 994;
 			    position: absolute;
-			    top: 0;		    	
-		    }				    
+    			top: -9px;		    
+    		}				    
 		    span{
 			    display: inline-block;
 			    position: relative;
@@ -35,14 +41,23 @@
 
 	    &#person
 		{
-		    top: 24vh;
-		    left: 130px;
+		    top: 19vh;
+		    left: 122px;
 		    z-index: 994;
 		    padding-top: 23px;
+			#project-link{
+			    display: inline-block;
+			    position: relative;
+			    color: #ee5b96;
+			    z-index: 993;
+			    cursor: pointer;
+			    font-weight: 600;
+			    width: auto;
+		    }
 		    h3{
 			    z-index: 994;
 			    position: absolute;
-			    top: 0;		    	
+			    top: -11px;		    	
 		    }		    
 		}			
 	}

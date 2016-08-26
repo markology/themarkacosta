@@ -11,7 +11,7 @@ export class Skills extends React.Component{
 	componentDidMount(){
 		// anim($('#projects-link'), 0, 1900)
 		anim($('#skills').children('h1'), 7, 1900)
-		anim($('#skills').children('p'), 0, 1900)		
+		anim($('#skills').children('p'), 379, 1900)		
 		bars();
 		donuts();
 		// anim($('#person').children('h3'), 0, 1900)
