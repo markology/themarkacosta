@@ -15,9 +15,6 @@ export class Projects extends React.Component{
 		}
 	}
 
-	setSlide(e){
-		console.log(e)
-	}
 
 	slideLeft(){
 		var x = this.state.slide;
@@ -107,16 +104,16 @@ export class Projects extends React.Component{
 					<div id="right" onClick={this.slideRight.bind(this)}><i className="fa fa-chevron-right"></i></div>
 					<div id="indicator">
 						<div>
-							<span onClick={this.setSlide.bind(this)} className={classNames({
+							<span className={classNames({
 								'active': this.state.slide == 0
 							})}></span>
-							<span onClick={this.setSlide.bind(this)} className={classNames({
+							<span  className={classNames({
 								'active': this.state.slide == 1
 							})}></span>
-							<span onClick={this.setSlide.bind(this)} className={classNames({
+							<span  className={classNames({
 								'active': this.state.slide == 2
 							})}></span>
-							<span onClick={this.setSlide.bind(this)} className={classNames({
+							<span className={classNames({
 								'active': this.state.slide == 3
 							})}></span>
 						</div>

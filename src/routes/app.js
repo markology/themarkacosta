@@ -40,7 +40,6 @@ router.post('/text', function(req, res){
 	console.log(req.body)
 	textbelt('6095131269', "asd", undefined,function(err){
 		if(err){
-			console.dir(err)
 		}
 	} )
 
@@ -49,7 +48,6 @@ router.post('/text', function(req, res){
 
 
 router.get('/', function(req, res) {
-	console.dir('hello')
 	res.sendFile(path.resolve('./src/views/index.html'));
 });
 

@@ -1,6 +1,9 @@
 var webpack = require('webpack');
 
-
+    var definePlugin =  new webpack.DefinePlugin({
+      'process.env':{
+        'NODE_ENV': JSON.stringify('production')
+      }});
 module.exports = {
   cache: true,
   entry: {
@@ -27,6 +30,7 @@ new webpack.optimize.UglifyJsPlugin({
     compress: {
         warnings: false
     }
-})  ]
+})  ,
+definePlugin]
 
 };

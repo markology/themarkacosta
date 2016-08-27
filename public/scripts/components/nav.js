@@ -58,9 +58,6 @@ export class Nav extends React.Component{
   }
   generateItem(item){
 
-    console.log(this.state.activeItem)
-    console.log(store.getState().activeState)
-    console.log(item.option)
     return <NavItem onClick={this.handleClick} className={classNames({
       [item.icon.toString()]: true,
       'active': (item.option.toString() == this.state.activeItem.toString())
