@@ -64,40 +64,36 @@ import velocity from './../../js/velocity.min.js'
 // }
 
 export function bubbles(){
-
 	$('.project').each(function(){
-
 		$(this).on('click', function(){
-			if(!$(this).hasClass('active')) {
-					
-				$('.project').removeClass('active');
-				$('.project').removeClass('bottom-orbit');
-				$('.project').removeClass('top-orbit');
-				$(this).addClass('active')
-
-
-				var t = 0;
-				$('.project').each(function(){
-					if(!$(this).hasClass('active') && t < 2){
-				
-						if(t == 0){
-
-							$(this).addClass('top-orbit');
-	
-						}
-						else{
-							$(this).addClass('bottom-orbit');						
-	
-						}
-						t++;						
-					}
-				})
-			}
+			$('.project').each(function(){
+				$(this).addClass('bottom-orbit');							
+			})
+			$('#projects h1').addClass('bottom-orbit');
 		})
-
 	})
 }
 
+
+export function slide(n){
+
+	console.log(n)
+
+	var x = '0vw';
+	if(n == 1){
+		x = '-78vw';
+	}
+	else if(n == 2){
+		x = '-156vw';
+	}
+	else if(n ==3){
+		x = '-234vw'
+	}
+
+	$('#slider').velocity({
+		translateX: x
+	}, {duration: 200, easing: 'ease' })
+}
 
 export function bars(){
 	var skills = ['230px','270px', '250px', '240px', '280px', '220px'];

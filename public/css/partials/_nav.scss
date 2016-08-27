@@ -93,6 +93,7 @@
 	    position: absolute;
 	    bottom: 0;
 	    li{
+			cursor:pointer;
 		    height: 40px;
 		    position: relative;	    	
 	    	&:hover{

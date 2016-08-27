@@ -13,9 +13,8 @@ export var items = [
 
 
 export var socials = [
-      {"icon": "fa fa-linkedin", "option": "LinkedIn", "url": "/Home"},
-      {"icon": "fa fa-github", "option": "GitHub", "url": "/About"},
-      {"icon": "fa fa-stack-overflow", "option": "Stack Overflow", "url": "/Skills"}];
+      {"icon": "fa fa-linkedin", "option": "LinkedIn", "url": "www.linkedin.com"},
+      {"icon": "fa fa-github", "option": "GitHub", "url": "www.github.com/papasquats"}];
 
 
 // load loadJSON(callback, filename) {   

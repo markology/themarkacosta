@@ -29,7 +29,7 @@ export class About extends React.Component{
 				<span id="person">
 					<p id="line">
 						My name is Mark Acosta, but people call me .. Mark Acosta. 
-						I am a relentless seeker of new information. I started coding in high school in South Jersey and loved it but my real passion became apparent during my time at Rowan Unversity.I studied JAVA, but I never felt quenched until I decided to become Web Developer. Why? Because I like quick results and competition. Nothing excites me more than becoming an expert at my craft. I hear it so much that sometimes I actually believe my name is "You need to take a break". 
+						I am a relentless seeker of new information. I started coding in high school in South Jersey and loved it but my real passion became apparent during my time at Rowan Unversity.I studied JAVA, but I never felt quenched until I decided to become a Web Developer. Why? Because I like quick results and competition. Nothing excites me more than becoming an expert at my craft. I hear it so much that sometimes I actually believe my name is "You need to take a break". 
 						My other passions include drumming, art and fitness.    
 
 						I have experience in many languages but I specialize in JavaScript. 

@@ -42,7 +42,7 @@ export class Skills extends React.Component{
 					<span className="chart" id="coding-languages">
 						<span>
 							<div className="fancy-pink" ></div>
-							<p>Angular 2</p>						
+							<p>Angular2</p>						
 						</span>
 					</span>	
 					<span className="chart" id="coding-languages">

@@ -64,6 +64,7 @@ svg#svg1{
     		display:inline-block;
 			transition: color .1s ease,transform .3s ease;
 			opacity: 0;	
+    		text-shadow: 0px 2px 1px black;			
     		&:hover{
     			color: #ee5b96;
     			transition: color .1s ease;	
