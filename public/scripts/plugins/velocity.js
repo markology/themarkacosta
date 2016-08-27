@@ -131,7 +131,6 @@ export function lines(){
 
 	}
 	$('#line').html('');
-	console.log(spans)
 	for(var x  in spans){
 		$(spans[x]).mouseover(function(){
 		    $(this).addClass('rubberBandLight').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
