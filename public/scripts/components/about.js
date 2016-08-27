@@ -22,7 +22,7 @@ export class About extends React.Component{
 					<span>b</span>
 					<span>o</span>
 					<span>u</span>
-					<span>t</span>
+					<span style="margin-right: 10px">t</span>
 					<span>M</span>
 					<span>e</span>
 				</h1>

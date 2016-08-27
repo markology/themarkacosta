@@ -54,9 +54,9 @@ export class Bean extends React.Component{
 									For every project git and GitHub are invaluable to handling goals in an Agile environment,  keep track of updates/backups and collaborating in a team environment.
 								</p>							
 							</div>
-							<a  href="/assets/git.png" data-title="Repo" className="right"></a>	
+							<a  href="/assets/git.png" data-lightbox="image-6"data-title="Repo" className="right"></a>	
 						</div>
-						<a  href="/assets/git1.png" data-title="Commits"  className="bottom">
+						<a  href="/assets/git1.png" data-lightbox="image-5"data-title="Commits"  className="bottom">
 						</a>
 					</div>	
 

@@ -1,9 +1,8 @@
 import {anim,bubbles,slide} from './../plugins/velocity.js';
 import classNames from 'classnames';
 import {Razu} from './projects/razu.js'
-import {Hu} from './projects/Hu.js'
+import {Hu} from './projects/HU.js'
 import {Bean} from './projects/bean.js'
-import lightbox from 'lightbox2/dist/js/lightbox-plus-jquery.min.js'
 export class Projects extends React.Component{
 	constructor(props){
 		super(props);
