@@ -21,5 +21,12 @@ module.exports = {
   },
   resolve: {
     extensions: ['', '.js', '.json'] 
-  }
+  },
+  plugins:[
+new webpack.optimize.UglifyJsPlugin({
+    compress: {
+        warnings: false
+    }
+})  ]
+
 };
