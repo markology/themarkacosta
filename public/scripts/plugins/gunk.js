@@ -172,11 +172,12 @@ export  function gunk(b, refresh){
 		}
 
 		// Get pixel positions
-		$('#the-mark-acosta').append(canvas)
 
-
-		drawText(b);
-		positionParticles(b);
+		font.onload = function(){
+			$('#the-mark-acosta').append(canvas)
+			drawText(b)
+			positionParticles(b);
+		}
 
 		// Update
 		function update() {
