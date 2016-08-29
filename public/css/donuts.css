@@ -1,0 +1,22 @@
+@font-face {
+    font-family: Azedo;
+    src: url(fonts/Azedo-Bold.otf);
+    font-weight: 600;
+}
+@font-face {
+    font-family: Azedo;
+    src: url(fonts/Azedo-Light.otf);
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: pier;
+    src: url(fonts/pier-bold.otf);
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: pier;
+    src: url(fonts/pier-regular.otf);
+    font-weight: 500;
+}
