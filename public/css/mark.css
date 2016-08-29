@@ -4,7 +4,9 @@
 #about #line {
   max-height: 80vh;
   overflow-y: auto;
-  overflow-x: visible; }
+  position: relative;
+  overflow-x: visible;
+  height: 80vh; }
   #about #line > div:first-of-type {
     margin-bottom: 17px; }
   #about #line span {

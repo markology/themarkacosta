@@ -3,7 +3,9 @@
 	#line{
 	    max-height: 80vh;
 	    overflow-y: auto;
-	    overflow-x: visible;		
+	    position: relative;
+	    overflow-x: visible;
+	    height: 80vh;	
 		& > div:first-of-type{
     		margin-bottom: 17px;			
 		}
