@@ -1,6 +1,5 @@
 
 import particleground from './../../js/particle.js'
-import Font from './../../js/Font.js'
 
 
 export function drawText(b) {
@@ -128,10 +127,7 @@ export  function gunk(b, refresh){
 				chip();
 			}, 1200)
 		}
-		var font = new Font();
-		font.fontFamily = "pier";
-		font.src = "./../../css/fonts/pier-bold.otf"
-		font.metrics.weightclass = 600;
+
 		var canvas = document.createElement('canvas');
 		canvas.id = 'canvas';
 
@@ -172,13 +168,12 @@ export  function gunk(b, refresh){
 		}
 
 		// Get pixel positions
+		$('#the-mark-acosta').append(canvas)
 
-		font.onload = function(){
-			$('#the-mark-acosta').append(canvas)
+		document.fonts.ready.then(function () {
 			drawText(b)
 			positionParticles(b);
-		}
-
+		});	
 		// Update
 		function update() {
 		  clear();

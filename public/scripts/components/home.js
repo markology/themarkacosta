@@ -10,18 +10,25 @@ export class Home extends React.Component{
 	}
 
 	componentDidMount(){
+	    var isFirefox = typeof InstallTrigger !== 'undefined';
 
 		if(this.props.first){
 			anim($('#greeting'), 3, 1100)
 			anim($('#title'), 13, 1100)
 			anim($('#contact-button'), 0, 1100)
-		    logo();    
+		    if(!isFirefox){
+			  logo();    	      	
+		    }		
 		}
 		else{
 			anim($('#greeting'), 3, 2900)
 			anim($('#title'), 13, 2900)
 			anim($('#contact-button'), 0, 2900)	
-		    logo();    
+
+		    if(!isFirefox){
+			  logo();    	      	
+		    }
+
 					
 		}
 	}
@@ -31,6 +38,11 @@ export class Home extends React.Component{
 
 	}
 	render(){
+	    var isFirefox = typeof InstallTrigger !== 'undefined';
+	    var o = 0;
+		if(!isFirefox)
+			o =	1;
+
 		return(
 			<span id="home">
 				<h2 id="greeting">
@@ -55,9 +67,8 @@ export class Home extends React.Component{
 					<span>v</span>
 				</h3>	
 				<p id="title-under"><span>Full Stack JavaSc</span> <span>ript Developer</span></p>
-				<img id="flag" src=""></img>
 				<span  onClick={this.handleClick.bind(this)}id="contact-button">contact</span>	
-				<span id="astronaut"></span>	
+				<span style={{'opacity': o}}id="astronaut"></span>	
 			</span>)
 	}
 }

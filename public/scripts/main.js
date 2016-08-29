@@ -35,8 +35,12 @@ class TheMarkAcosta extends React.Component {
   }
 
   componentDidMount(){
-    gunk(this);
-    particle();
+    var isIE = /*@cc_on!@*/false || !!document.documentMode;
+    var isEdge = !isIE && !!window.StyleMedia;
+      if(!isEdge){
+        gunk(this);
+        particle();
+      }
   }
 
   update(state){
@@ -49,12 +53,17 @@ class TheMarkAcosta extends React.Component {
 
 
   render() {
+    var isFirefox = typeof InstallTrigger !== 'undefined';
+    var isIE = /*@cc_on!@*/false || !!document.documentMode;
+    var isEdge = !isIE && !!window.StyleMedia;
+
     if(!this.state.firstLoadHome){
 
       $('#content-cover').show();
-
-      drawText(this);
-      positionParticles(this);
+      if(!isEdge && !isFirefox){
+        drawText(this);
+         positionParticles(this);
+      }
 
 
       setTimeout(() => {
@@ -67,22 +76,27 @@ class TheMarkAcosta extends React.Component {
 
     if(this.state.activeItem == 'Home' )
     {
+      if(!isFirefox)
       $($('canvas')[1]).show() ;    
       h = <Home  first={this.state.firstLoad} onUpdate={this.update.bind(this)} />
     }
   	else if( this.state.activeItem == "About"){
+      if(!isFirefox)
       $($('canvas')[1]).hide();  		
       h = <About onUpdate={this.update.bind(this)} />
     }
   	else if( this.state.activeItem == "Skills"){
+      if(!isFirefox)
       $($('canvas')[1]).hide();  		
       h = <Skills />  		
     }
   	else if( this.state.activeItem == "Projects"){
+      if(!isFirefox)
       $($('canvas')[1]).hide();  		
       h = <Projects />
     }
   	else if( this.state.activeItem == "Contact"){
+      if(!isFirefox)
       $($('canvas')[1]).hide() ; 		
       h =  <Contact />  
     }

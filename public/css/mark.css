@@ -1052,9 +1052,7 @@ svg#svg1 {
       position: relative !important;
       cursor: pointer !important;
       display: inline-block !important;
-      margin-right: 39px !important;
-      padding-top: 10px !important;
-      margin-top: -10px !important; }
+      margin-right: 21px !important; }
 
   #socials {
     /* display: block!important; */
@@ -1136,7 +1134,280 @@ svg#svg1 {
     padding-top: 20px !important; }
 
   #close {
-    top: 13vh; } }
+    top: 13vh !important; } }
+@media (max-width: 500px) {
+  #nav #nav-items li {
+    height: 45px !important;
+    position: relative !important;
+    cursor: pointer !important;
+    /* width: 28px!important; */ }
+    #nav #nav-items li:first-of-type {
+      margin-left: 31px !important; }
+
+  #home h3 {
+    position: absolute !important;
+    color: white !important;
+    top: calc(34vh + 46px) !important;
+    font-size: 60px !important;
+    left: 140px !important;
+    font-family: pier !important;
+    font-weight: 600 !important;
+    z-index: 997 !important;
+    overflow-wrap: break-word !important;
+    left: calc(14% - 18px) !important;
+    transition: color 0.1s ease !important;
+    line-height: 1 !important; }
+
+  #home h2 {
+    position: absolute !important;
+    top: calc(32vh - 48px) !important;
+    left: 57px !important;
+    color: white !important;
+    font-family: pier !important;
+    font-weight: 600 !important;
+    font-size: 60px !important;
+    z-index: 997 !important;
+    transition: color 0.1s ease; }
+
+  #home #title-under {
+    position: absolute !important;
+    top: 52.6vh !important;
+    font-family: Azedo !important;
+    color: #f7d237 !important;
+    font-size: 0.8rem !important;
+    left: 180px !important;
+    font-weight: 100 !important;
+    letter-spacing: 6px !important;
+    z-index: 997 !important;
+    width: 93% !important;
+    left: 12% !important;
+    top: calc(49vh + 139px) !important;
+    /* text-shadow: 0px 3px 3px black!important; */ }
+
+  #home #contact-button {
+    top: calc(41vh + 140px) !important; }
+
+  #about h1 {
+    font-family: pier !important;
+    font-size: 60px !important;
+    position: absolute !important;
+    color: white !important;
+    top: 7vh !important;
+    left: 34px !important;
+    z-index: 994 !important;
+    cursor: default !important; }
+
+  #skills #languages {
+    position: absolute !important;
+    top: 72vh !important;
+    z-index: 995 !important;
+    /* left: calc(300px + 7vw) !important; */
+    left: 0px !important; }
+    #skills #languages .charts {
+      width: 9vw !important; }
+
+  #skills #languages .chart {
+    top: 300px !important;
+    left: 500px !important;
+    display: inline-block !important;
+    z-index: 995 !important;
+    margin: 12px !important;
+    text-align: center !important;
+    width: 13vw !important;
+    height: 400px !important;
+    transition: transform 0.2s ease !important;
+    -webkit-transition: transform 0.2s ease !important;
+    transform: scale(1) translateY(0px) !important; }
+
+  #basics > div {
+    height: 96px !important;
+    display: inline-block !important;
+    vertical-align: top !important;
+    width: 130px !important;
+    width: 30vw !important;
+    margin: 0px !important;
+    transition: transform 0.2s ease !important;
+    -webkit-transition: transform 0.2s ease !important;
+    transform: scale(1) !important; }
+
+  #basics {
+    /* z-index: 995!important; */
+    position: absolute !important;
+    height: 200px !important;
+    display: block !important;
+    width: 100% !important;
+    left: calc(365px + 7vw) !important;
+    top: calc(137vh) !important;
+    left: 0px !important; }
+
+  #skills > p {
+    color: white !important;
+    font-family: Azedo !important;
+    position: absolute !important;
+    width: 250px !important;
+    left: 40px !important; }
+
+  #skills h1 {
+    font-family: pier !important;
+    font-size: 60px !important;
+    position: absolute !important;
+    color: white !important;
+    top: 7vh !important;
+    left: 40px !important; }
+
+  #projects .project {
+    position: static !important;
+    width: 26vw !important;
+    height: 26vw !important;
+    margin-bottom: 35px !important;
+    margin: auto !important;
+    margin-bottom: 33px !important; }
+
+  #projects {
+    top: 21vh !important;
+    position: absolute !important;
+    left: 31% !important;
+    display: block !important;
+    width: 100% !important; }
+    #projects h1 {
+      text-align: center !important;
+      width: 100% !important;
+      text-align: center !important;
+      left: 0 !important;
+      top: -10vh !important; }
+    #projects .project h3 {
+      box-shadow: none !important; }
+
+  #left, #right {
+    display: none !important; }
+
+  #razu-project {
+    width: 77vw !important;
+    height: 75vh !important;
+    overflow: hidden !important;
+    text-align: left !important;
+    margin-left: 2vw !important;
+    margin-top: -18vh !important;
+    border-radius: 1px !important;
+    box-shadow: 0px 0px 1px 3px #6ee3ff, 0px 0px 6px 3px black inset, 0px 0px 6px 3px black !important;
+    padding: 7px !important;
+    background: rgba(4, 4, 4, 0.35) !important;
+    display: inline-block !important;
+    margin-left: 10% !important; }
+
+  #contact #selfie {
+    height: 100% !important;
+    width: 48vw !important;
+    position: absolute !important;
+    top: 0 !important;
+    opacity: 0 !important; }
+
+  .moneyz {
+    position: absolute !important;
+    top: 29vh !important;
+    left: 11px !important; }
+
+  #contact h1 {
+    font-family: pier !important;
+    font-size: 60px !important;
+    position: absolute !important;
+    color: white !important;
+    top: 7vh !important;
+    /* left: 130px!important; */
+    z-index: 994 !important;
+    cursor: default !important;
+    width: 100% !important;
+    left: 0 !important;
+    text-align: center !important; }
+
+  #home h1#crumble {
+    top: 34vh !important;
+    position: absolute !important;
+    font-size: 60px !important;
+    font-family: pier !important;
+    font-weight: 600 !important;
+    left: 160px !important;
+    color: #ee5b96 !important;
+    width: 100% !important;
+    left: 55px !important; }
+
+  #canvas {
+    display: none !important; }
+
+  #projects .proejects#Razu {
+    margin-bottom: 33px !important; } }
+@media (max-width: 330px) {
+  #home h1#crumble {
+    left: 36px !important; }
+
+  #home h2 {
+    left: 38px !important; }
+
+  #skills #languages .chart > span > div {
+    height: 0px !important;
+    display: inline-block !important;
+    text-align: center !important;
+    width: 34px !important; }
+
+  #skills #languages .chart {
+    width: 7vw !important; }
+
+  #languages {
+    top: 88vh !important; }
+
+  #basics {
+    top: calc(145vh) !important; }
+
+  #projects {
+    top: 21vh !important;
+    position: absolute !important;
+    left: 3% !important;
+    padding-top: 13vh; }
+    #projects h2 {
+      font-family: Azedo !important;
+      color: #ca5282 !important;
+      text-shadow: 0px 1px 2px black !important;
+      /* position: absolute!important; */
+      top: 0 !important;
+      left: 13px !important;
+      background: white !important;
+      padding: 2px 5px !important;
+      border-radius: 2px !important;
+      box-shadow: 0px 4px 6px 0px black !important;
+      /* z-index: -1!important; */
+      text-align: center !important;
+      padding-bottom: 9px !important;
+      background: radial-gradient(gainsboro 1%, white 58%, gray 88%, black 137%) !important;
+      background: white !important; }
+
+  .project#Razu project#Razu {
+    background-image: url("/assets/razu.png") !important;
+    background-size: cover !important;
+    background-position: center !important;
+    left: 132px !important;
+    transition: left 0.6s ease, transform 0.5s ease !important;
+    background-position: left !important; }
+
+  #nav #nav-items {
+    margin-top: 0vh !important;
+    display: block !important;
+    padding-left: 57px !important; }
+
+  #socials {
+    display: none !important; }
+
+  .moneyz {
+    position: absolute !important;
+    top: 29vh !important;
+    left: 15px !important;
+    background: #c85180 !important;
+    z-index: 995 !important;
+    padding: 2px !important;
+    box-shadow: 0px 2px 7px 0px rgba(0, 0, 0, 0.57) !important;
+    width: 90vw !important; }
+
+  .moneyz input, .moneyz textarea {
+    width: 80vw !important; } }
 html, body, #the-mark-acosta, #content {
   margin: 0px;
   height: 100%;
