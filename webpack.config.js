@@ -6,6 +6,7 @@ var webpack = require('webpack');
       }});
 module.exports = {
   cache: true,
+  devtool: 'cheap-module-source-map',
   entry: {
     main:  './public/scripts/main.js',
   },
@@ -26,11 +27,12 @@ module.exports = {
     extensions: ['', '.js', '.json'] 
   },
   plugins:[
-new webpack.optimize.UglifyJsPlugin({
-    compress: {
+
+definePlugin,
+    new webpack.optimize.UglifyJsPlugin({
+      compress: {
         warnings: false
-    }
-})  ,
-definePlugin]
+      }
+    })]
 
 };

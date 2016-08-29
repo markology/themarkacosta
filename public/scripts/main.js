@@ -1,12 +1,10 @@
 
 import Isvg from 'react-inlinesvg'
-import store from './redux/store.js';
 import {Home} from './components/home.js';
 import {About} from './components/about.js';
 import {Contact} from './components/contact.js';
 import {Skills} from './components/skills.js';
 import {Projects} from './components/projects.js';
-import {Provider} from 'react-redux'
 import {Nav, items, socials} from './components/nav.js'
 import {gunk , drawText, positionParticles} from './plugins/gunk.js';
 import {particle} from './plugins/particle.js';
@@ -21,7 +19,7 @@ class TheMarkAcosta extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      activeItem: store.getState().activeState,
+      activeItem: 'Home',
       particles: [],
       ctx: null,
       keyword: "I'm Mark ,",
@@ -115,9 +113,7 @@ class TheMarkAcosta extends React.Component {
 }
 
 ReactDOM.render(
-	<Provider store={store}>
  <TheMarkAcosta  />
-  </Provider>
 
  ,
   document.getElementById('the-mark-acosta')

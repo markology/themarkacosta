@@ -1,4 +1,4 @@
-import {anim, bars} from './../plugins/velocity.js';
+import {anim, bars, rotate} from './../plugins/velocity.js';
 import {charts, donuts} from './../plugins/chart.js';
 
 export class Skills extends React.Component{
@@ -10,10 +10,11 @@ export class Skills extends React.Component{
 
 	componentDidMount(){
 		// anim($('#projects-link'), 0, 1900)
-		anim($('#skills').children('h1'), 7, 1900)
+		anim($('#skills').children('h1')[0], 7, 1900)
 		anim($('#skills').children('p'), 379, 1900)		
 		bars();
 		donuts();
+		rotate();
 		// anim($('#person').children('h3'), 0, 1900)
 		// anim($('#coder').children('h3'), 0, 1900)
 	}

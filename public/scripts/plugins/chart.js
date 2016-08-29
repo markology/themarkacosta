@@ -1,4 +1,3 @@
-import velocity from './../../js/velocity.min.js'
 
 import circliful from './../../js/donuts.js'
 
@@ -100,15 +99,6 @@ export function donuts(){
     });   
 
 
-          for( var x =0; x < 5; x++){
-    
-              $($('.svg-container')[x]).velocity({
-                rotateZ: '0deg'
-              }, {
-                easing: 'easeOutQuart',
-                delay: 2200
-              })
-              
-          } 
+
                       
 }

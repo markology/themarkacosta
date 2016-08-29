@@ -1,7 +1,4 @@
 import classNames from 'classnames';
-import { connect } from 'react-redux';
-import {changeState } from './../redux/actions.js';
-import store from './../redux/store'
 import Isvg from 'react-inlinesvg'
 export var items = [
       {"icon": "fa fa-home Home", "option": "Home", "url": "/Home"},
@@ -13,29 +10,8 @@ export var items = [
 
 
 export var socials = [
-      {"icon": "fa fa-linkedin", "option": "LinkedIn", "url": "www.linkedin.com"},
-      {"icon": "fa fa-github", "option": "GitHub", "url": "www.github.com/papasquats"}];
+      {"icon": "fa fa-github", "option": "GitHub", "url": "http://www.github.com/papasquats"}];
 
-
-// load loadJSON(callback, filename) {   
-
-//     var xobj = new XMLHttpRequest();
-//         xobj.overrideMimeType("application/json");
-//     xobj.open('GET', filename, true); // Replace 'my_data' with the path to your file
-//     xobj.onreadystatechange = function () {
-//           if (xobj.readyState == 4 && xobj.status == "200") {
-//             // Required use of an anonymous callback as .open will NOT return a value but simply returns undefined in asynchronous mode
-//             callback(xobj.responseText);
-//           }
-//     };
-//     xobj.send(null);  
-//  }
-
-@connect((store)=>{
-    return {
-        activeState:  store.activeState
-    }
-})
 
 
 
@@ -47,12 +23,11 @@ export class Nav extends React.Component{
     super(props);
 
     this.state = {
-      activeItem: store.getState().activeState
+      activeItem:  'Home'
     }
   }
 
   handleClick = (event) =>{
-    store.dispatch(changeState(event.target.classList[2]))
     this.setState({activeItem: event.target.classList[2]} )
     this.props.onUpdate(event.target.classList[2]);
   }
@@ -60,8 +35,8 @@ export class Nav extends React.Component{
 
     return <NavItem onClick={this.handleClick} className={classNames({
       [item.icon.toString()]: true,
-      'active': (item.option.toString() == this.state.activeItem.toString())
-    })} key={item.option} option={item.option} url={item.url} />
+      'active': (item.option.toString() == this.state.activeItem.toString())})} 
+      key={item.option} option={item.option} url={item.url} />
   }
 
 
@@ -123,12 +98,23 @@ class NavItem extends React.Component{
 
 
     render (){
-        return (
-            <li onClick={this.props.onClick}>
-              <a>
+      var t = null;
+
+      if(this.props.option == 'LinkedIn' || this.props.option == 'GitHub'){
+        t = (<a href={this.props.url}>
                 <i className={this.props.className }></i>  
                 <span>{this.props.option}</span>
-              </a>
+              </a>)
+      }
+      else{
+        t = (<a>
+                <i className={this.props.className }></i>  
+                <span>{this.props.option}</span>
+              </a>);
+      }
+        return (
+            <li onClick={this.props.onClick}>
+              {t}
             </li>
         );
     }

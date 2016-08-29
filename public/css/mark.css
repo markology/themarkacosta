@@ -1,6 +1,8 @@
 @import "https://fonts.googleapis.com/css?family=La+Belle+Aurore";
 @import "https://fonts.googleapis.com/css?family=Quicksand:300,400";
 @import "https://fonts.googleapis.com/css?family=Reem+Kufi";
+#about #line > div:first-of-type {
+  margin-bottom: 17px; }
 #about #line span {
   display: inline-block;
   margin-left: 5px; }
@@ -32,10 +34,9 @@
       font-weight: 600;
       width: auto; }
   #about > span#person {
-    top: 19vh;
+    top: calc(20vh + 23px);
     left: 122px;
-    z-index: 994;
-    padding-top: 23px; }
+    z-index: 994; }
     #about > span#person #project-link {
       display: inline-block;
       position: relative;
@@ -86,12 +87,12 @@
   right: 48px;
   margin-top: calc(29vh - 100px); }
   #about #moon #bug-lord {
-    height: 600px;
+    height: 300px;
     position: absolute;
     right: 28px;
-    top: -117px;
+    top: 21px;
     z-index: 996;
-    transform: scale(0.41);
+    /* transform: scale(0.41); */
     right: -188px; }
   #about #moon #hill {
     position: absolute;
@@ -706,32 +707,33 @@
       #nav #socials li:hover span {
         opacity: 0 !important; }
       #nav #socials li i {
-        font-size: 1rem;
+        font-size: 1.6rem;
         display: block;
         height: 100%;
-        color: #616161; }
+        color: #616161;
+        margin-left: 6px; }
   #nav ul {
     list-style: none;
     padding: 0px; }
     #nav ul li:hover a span {
       opacity: 1;
       color: #6ee3ff !important;
-      transition: opacity .6s ease, color .7s ease; }
+      transition: opacity .3s ease, color .4s ease; }
     #nav ul li:hover a i {
       opacity: 0;
       color: #6ee3ff !important;
-      transition: opacity .6s ease, color .7s ease; }
+      transition: opacity .3s ease, color .4s ease; }
     #nav ul li a {
       text-decoration: none; }
       #nav ul li a i {
         opacity: 1;
         color: #6ee3ff;
-        transition: opacity .6s ease, color .7s ease;
+        transition: opacity .3s ease, color .4s ease;
         display: block; }
       #nav ul li a span {
         opacity: 0;
         color: #616161;
-        transition: opacity .6s ease, color .7s ease; }
+        transition: opacity .3s ease, color .4s ease; }
 
 #contact h1 {
   font-family: pier;

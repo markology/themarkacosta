@@ -1,67 +1,6 @@
-import velocity from './../../js/velocity.min.js'
+// import velocity from './../../js/velocity.min.js'
 
-// export function bubbles(){
-// 	var r = '10vw';
-// 	var v = '-25vw';
-// 	var t1 = '-50vw';
 
-// 	$('.project').each(function(){
-
-// 		$(this).on('click', function(){
-// 			if(!$(this).hasClass('active')) {
-// 				var z1 = $(this).attr('id') 
-// 				var x1 = '0vw';		
-// 				console.log(z1)				
-// 				if(z1 == 'VU')
-// 					x1 = v;
-// 				if(z1 == 'Razu')
-// 					x1 = r;
-// 				if(z1 == "Tell")
-// 					x1 = t1;					
-// 				$('.project').removeClass('active');
-// 				$('.project').removeClass('bottom-orbit');
-// 				$('.project').removeClass('top-orbit');
-// 				$(this).addClass('active')
-// 				$(this).velocity({
-// 					translateX: x1
-// 				});		
-
-// 				var t = 0;
-// 				$('.project').each(function(){
-// 					if(!$(this).hasClass('active') && t < 2){
-// 							var z = $(this).attr('id') 
-// 							var x = '0vw';		
-// 							// console.log(z)				
-
-// 							if(z == 'VU')
-// 								x = v;
-// 							if(z == 'Razu')
-// 								x = r;
-// 							if(z == "Tell")
-// 								x = t1;	
-
-// 						if(t == 0){
-
-// 							$(this).addClass('top-orbit');
-							
-// 							$(this).velocity({
-// 								translateX: x
-// 							});						
-// 						}
-// 						else{
-// 							$(this).addClass('bottom-orbit');						
-// 							$(this).velocity({
-// 								translateX: x
-// 							});						
-// 						}
-// 						t++;						
-// 					}
-// 				})
-// 			}
-// 		})
-
-// 	})
-// }
 
 export function bubbles(){
 	$('.project').each(function(){
@@ -117,28 +56,48 @@ export function button(){
 	  })	
 }
 
+export function rotate(){
+          for( var x =0; x < 5; x++){
+    
+              $($('.svg-container')[x]).velocity({
+                rotateZ: '0deg'
+              }, {
+                easing: 'easeOutQuart',
+                delay: 2200
+              })
+              
+          } 	
+}
+
 
 export function lines(){
 	  
-	var words = $('#line').text().split(' ');
-	var spans = [];
-
-	for(var x in words){
-		var t = document.createElement('span');
-		var newContent = document.createTextNode(words[x] + ' '); 
-		t.appendChild(newContent);
-		spans.push(t); 
-
-	}
-	$('#line').html('');
-	for(var x  in spans){
-		$(spans[x]).mouseover(function(){
+	// var words = 
+	$('#line').children('div').each(function(){
+		$(this).mouseover(function(){
 		    $(this).addClass('rubberBandLight').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
 		      $(this).removeClass('rubberBandLight')
 		    });
 		  })
-		$('#line').prepend(spans[spans.length - x- 1]);
-	}
+	})
+	// var spans = [];
+
+	// for(var x in words){
+	// 	var t = document.createElement('span');
+	// 	var newContent = document.createTextNode(words[x] + ' '); 
+	// 	t.appendChild(newContent);
+	// 	spans.push(t); 
+
+	// }
+	// $('#line').html('');
+	// for(var x  in spans){
+	// 	$(spans[x]).mouseover(function(){
+	// 	    $(this).addClass('rubberBandLight').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+	// 	      $(this).removeClass('rubberBandLight')
+	// 	    });
+	// 	  })
+	// 	$('#line').prepend(spans[spans.length - x- 1]);
+	// }
 	  	
 
 }
@@ -204,7 +163,7 @@ export function anim(elem, charLength, del){
 	}
 
 	export function moon(){
-		$('#hill').velocity({right: '-50px'}, {ease: 'easeOutQuart', delay: 2800});
-		$('#bug-lord').velocity({right: '0px'}, {ease: 'easeOutQuart', delay: 2800});
+		$('#hill').velocity({translateX: '-138px'}, {ease: 'easeOutQuart', delay: 2800});
+		$('#bug-lord').velocity({translateX: '-250px'}, {ease: 'easeOutQuart', delay: 2800});
 	}
 	

@@ -1,3 +1,4 @@
+import velocity from './../../js/velocity.min.js'
 
 var l = false;
 export function load(){

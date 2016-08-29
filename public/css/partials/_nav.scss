@@ -106,10 +106,11 @@
 	    		}
 	    	}
 		    i{
-		    	font-size: 1rem;	
-		    	display:block;
-		    	height: 100%;
-    			color: #616161;		    	    	
+			    font-size: 1.6rem;
+			    display: block;
+			    height: 100%;
+			    color: #616161;
+			    margin-left: 6px;	    	    	
 	    	}
 	    }	        	
     }
@@ -122,14 +123,14 @@
 				a span{
 					opacity: 1;
 		    		color: #6ee3ff!important;					
-					transition: opacity .6s ease, color .7s ease;								
+					transition: opacity .3s ease, color .4s ease;								
 				}	
 
 				a i{
 					opacity: 0;
 	    			color: #6ee3ff!important;		    	    	
 
-					transition: opacity .6s ease, color .7s ease;		
+					transition: opacity .3s ease, color .4s ease;		
 				}		
 			}			
 			a{
@@ -137,13 +138,13 @@
 				i{
 					opacity:1;
 		    		color: #6ee3ff;					
-					transition: opacity .6s ease, color .7s ease;
+					transition: opacity .3s ease, color .4s ease;
 					display: block;					
 				}
 				span{
 					opacity: 0;
 	    			color: #616161;		    	    		
-					transition: opacity .6s ease, color .7s ease;
+					transition: opacity .3s ease, color .4s ease;
 				
 				}
 			}

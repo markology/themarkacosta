@@ -63,7 +63,7 @@ export class Contact extends React.Component{
 	componentDidMount(){
 
 		this.keys();
-		anim($('#contact').children('h1'), 7, 1900)
+		anim($('#contact').children('h1')[0], 7, 1900)
 
 		$('#email').on('click', () => {
 			this.sendEmail();

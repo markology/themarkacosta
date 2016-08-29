@@ -40,7 +40,7 @@ export class Projects extends React.Component{
 	}
 
 	componentDidMount(){
-		anim($('#projects').children('h1'), 7, 1900);
+		anim($('#projects').children('h1')[0], 7, 1900);
 		bubbles()
 	}
 
@@ -123,7 +123,6 @@ export class Projects extends React.Component{
 
 		return(
 			<div id="projects">
-				<div id="proj-load">!</div>
 				<h1><span>P</span>
 					<span>r</span>
 					<span>o</span>
