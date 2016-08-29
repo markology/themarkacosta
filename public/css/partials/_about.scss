@@ -2,7 +2,8 @@
 #about{
 	#line{
 	    max-height: 80vh;
-	    overflow-y: scroll;		
+	    overflow-y: auto;
+	    overflow-x: visible;		
 		& > div:first-of-type{
     		margin-bottom: 17px;			
 		}

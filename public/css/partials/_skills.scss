@@ -1,11 +1,11 @@
 #skills{
-	overflow-y:scroll;
+
 	& > div{
 		height: 90vh;
 		position: relative;
 		& > p{
 		    color: white;
-		    font-family: Azedo;
+		    font-family: Open Sans;
 		    position: absolute;
 		    top: calc(13vh + 76px);
 		    width: 250px;

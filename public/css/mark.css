@@ -3,7 +3,8 @@
 @import "https://fonts.googleapis.com/css?family=Reem+Kufi";
 #about #line {
   max-height: 80vh;
-  overflow-y: scroll; }
+  overflow-y: auto;
+  overflow-x: visible; }
   #about #line > div:first-of-type {
     margin-bottom: 17px; }
   #about #line span {
@@ -106,93 +107,91 @@
     z-index: 995;
     right: -188px; }
 
-#skills {
-  overflow-y: scroll; }
-  #skills > div {
-    height: 90vh;
-    position: relative; }
-    #skills > div > p {
-      color: white;
-      font-family: Azedo;
-      position: absolute;
-      top: calc(13vh + 76px);
-      width: 250px;
-      left: 104px;
-      z-index: 995;
-      line-height: 1.4;
-      font-family: 'Reem Kufi', sans-serif; }
-      #skills > div > p:nth-of-type(2n + 2) {
-        top: calc(27vh + 99px); }
-      #skills > div > p:nth-of-type(2n + 3) {
-        top: calc(31vh + 193px); }
-    #skills > div .svg-container {
-      transition: transform 1s ease;
-      transform: rotate(180deg); }
-    #skills > div h1 {
+#skills > div {
+  height: 90vh;
+  position: relative; }
+  #skills > div > p {
+    color: white;
+    font-family: Open Sans;
+    position: absolute;
+    top: calc(13vh + 76px);
+    width: 250px;
+    left: 104px;
+    z-index: 995;
+    line-height: 1.4;
+    font-family: 'Reem Kufi', sans-serif; }
+    #skills > div > p:nth-of-type(2n + 2) {
+      top: calc(27vh + 99px); }
+    #skills > div > p:nth-of-type(2n + 3) {
+      top: calc(31vh + 193px); }
+  #skills > div .svg-container {
+    transition: transform 1s ease;
+    transform: rotate(180deg); }
+  #skills > div h1 {
+    font-family: pier;
+    font-size: 60px;
+    position: absolute;
+    color: white;
+    top: 7vh;
+    left: 130px;
+    z-index: 994;
+    cursor: default; }
+    #skills > div h1 span {
+      display: inline-block;
+      position: relative;
       font-family: pier;
       font-size: 60px;
-      position: absolute;
+      /* position: absolute; */
       color: white;
-      top: 7vh;
-      left: 130px;
-      z-index: 994;
-      cursor: default; }
-      #skills > div h1 span {
-        display: inline-block;
-        position: relative;
-        font-family: pier;
-        font-size: 60px;
-        /* position: absolute; */
-        color: white;
-        /* top: 7vh; */
-        opacity: 0;
-        width: auto;
-        transition: color .1s ease,transform .3s ease; }
-        #skills > div h1 span:hover {
-          color: #ee5b96;
-          transition: color .1s ease; }
-    #skills > div #languages {
-      position: absolute;
-      top: calc(7vh - 28px);
+      /* top: 7vh; */
+      opacity: 0;
+      width: auto;
+      transition: color .1s ease,transform .3s ease; }
+      #skills > div h1 span:hover {
+        color: #ee5b96;
+        transition: color .1s ease; }
+  #skills > div #languages {
+    position: absolute;
+    top: calc(7vh - 28px);
+    z-index: 995;
+    left: calc(379px + 7vw);
+    height: 400px; }
+    #skills > div #languages .chart {
+      top: 300px;
+      left: 500px;
+      display: inline-block;
       z-index: 995;
-      left: calc(379px + 7vw);
-      height: 400px; }
-      #skills > div #languages .chart {
-        top: 300px;
-        left: 500px;
-        display: inline-block;
-        z-index: 995;
-        margin: 12px;
-        text-align: center;
-        width: 7vw;
-        height: 400px;
+      margin: 12px;
+      text-align: center;
+      width: 7vw;
+      height: 400px;
+      transition: transform .2s ease;
+      -webkit-transition: transform .2s ease;
+      transform: scale(1) translateY(0px); }
+      #skills > div #languages .chart:hover {
         transition: transform .2s ease;
         -webkit-transition: transform .2s ease;
-        transform: scale(1) translateY(0px); }
-        #skills > div #languages .chart:hover {
-          transition: transform .2s ease;
-          -webkit-transition: transform .2s ease;
-          transform: scale(1.1) translateY(-23px); }
-        #skills > div #languages .chart > span {
-          top: auto;
-          position: absolute;
-          bottom: 0;
-          margin: 0 11px;
-          display: block;
-          vertical-align: bottom;
-          left: auto; }
-          #skills > div #languages .chart > span > div {
-            height: 0px;
-            display: inline-block;
-            text-align: center;
-            width: 50px;
-            box-shadow: -2px 2px 8px 0px black; }
-        #skills > div #languages .chart p {
-          color: white;
-          font-family: pier;
-          font-size: .7rem;
+        transform: scale(1.1) translateY(-23px); }
+      #skills > div #languages .chart > span {
+        top: auto;
+        position: absolute;
+        bottom: 0;
+        margin: 0 11px;
+        display: block;
+        vertical-align: bottom;
+        left: auto; }
+        #skills > div #languages .chart > span > div {
+          height: 0px;
+          display: inline-block;
           text-align: center;
-          text-shadow: 1px 2px 2px black; }
+          width: 50px;
+          box-shadow: -2px 2px 8px 0px black; }
+      #skills > div #languages .chart p {
+        color: white;
+        font-family: pier;
+        font-size: .7rem;
+        text-align: center;
+        text-shadow: 1px 2px 2px black; }
 
 #basics {
   z-index: 995;
@@ -1143,7 +1142,62 @@ svg#svg1 {
 
   #close {
     top: 13vh !important; } }
+@media (max-width: 820px) {
+  #skills {
+    overflow-y: auto; }
+    #skills #languages {
+      position: absolute !important;
+      top: 82vh !important;
+      z-index: 995 !important;
+      /* left: calc(300px + 7vw) !important; */
+      left: 0px !important; }
+
+  .charts {
+    width: 9vw !important;
+    top: calc(84vh + 400px);
+    position: absolute; }
+
+  #skills #languages .chart {
+    top: 300px !important;
+    left: 500px !important;
+    display: inline-block !important;
+    z-index: 995 !important;
+    margin: 12px !important;
+    text-align: center !important;
+    width: 11vw !important;
+    height: 400px !important;
+    transition: transform 0.2s ease !important;
+    -webkit-transition: transform 0.2s ease !important;
+    transform: scale(1) translateY(0px) !important; }
+
+  #skills > div > p {
+    color: white !important;
+    font-family: Open Sans !important;
+    position: absolute !important;
+    width: 80vw !important;
+    left: 40px !important; }
+
+  #basics {
+    top: calc(84vh + 400px) !important;
+    position: absolute !important;
+    left: 0 !important; }
+    #basics div {
+      width: 17vw !important; }
+
+  #skills h1 {
+    font-family: pier !important;
+    font-size: 60px !important;
+    position: absolute !important;
+    color: white !important;
+    top: 7vh !important;
+    left: 40px !important; } }
 @media (max-width: 500px) {
+  #project-container {
+    top: 40px !important; }
+
+  #razu-project {
+    margin-top: 1vh !important; }
+
   #line {
     max-height: calc(89vh - 137px) !important; }
 
@@ -1253,7 +1307,7 @@ svg#svg1 {
 
   #skills > div > p {
     color: white !important;
-    font-family: Azedo !important;
+    font-family: Open Sans !important;
     position: absolute !important;
     width: 250px !important;
     left: 40px !important; }
@@ -1353,6 +1407,9 @@ svg#svg1 {
 
   #home h2 {
     left: 38px !important; }
+
+  #skills {
+    overflow-y: auto; }
 
   #skills #languages .chart > span > div {
     display: inline-block !important;
