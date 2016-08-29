@@ -168,12 +168,12 @@ export  function gunk(b, refresh){
 		}
 
 		// Get pixel positions
+		$('#the-mark-acosta').append(canvas)
 
 
 		drawText(b);
 		positionParticles(b);
 
-		$('#the-mark-acosta').append(canvas)
 		// Update
 		function update() {
 		  clear();
