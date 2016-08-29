@@ -209,6 +209,10 @@
 }
 
 @media (max-width: 500px){
+
+	#line{
+    	max-height: calc(89vh - 137px)!important;		
+	}
 	#nav #nav-items li {
 	    height: 45px!important;
 	    position: relative!important;
@@ -257,7 +261,7 @@
 	    font-weight: 100!important;
 	    letter-spacing: 6px!important;
 	    z-index: 997!important;
-	    width: 93%!important;
+	    width: 80%!important;
 	    left: 12%!important;
 	    top: calc(49vh + 139px)!important;
 	    /* text-shadow: 0px 3px 3px black!important; */
@@ -297,7 +301,7 @@
 	    z-index: 995!important;
 	    margin: 12px!important;
 	    text-align: center!important;
-	    width: 13vw!important;
+	    width: 11vw!important;
 	    height: 400px!important;
 	    transition: transform .2s ease!important;
 	    -webkit-transition: transform .2s ease!important;
@@ -326,7 +330,7 @@
 	    left: 0px!important;
 	}	
 
-	#skills > p {
+	#skills > div > p {
 	    color: white!important;
 	    font-family: Azedo!important;
 	    position: absolute!important;
@@ -352,9 +356,9 @@
 	}
 
 	#projects{
-	    top: 21vh!important;
+	    top: 29vh!important;
 	    position: absolute!important;
-	    left: 31%!important;
+	    left: 1%!important;
 	    display: block!important;
 	    width: 100%!important;
 
@@ -363,7 +367,7 @@
 		    width: 100%!important;
 		    text-align: center!important;
 		    left: 0!important;
-		    top: -10vh!important;
+		    top: -25vh!important;
 	    }
 
 	    .project h3{
@@ -401,7 +405,7 @@
 	.moneyz {
 	    position: absolute !important;
 	    top: 29vh !important;
-	    left: 11px !important;
+	    left: 11% !important;
 	}    
 
 	#contact h1{
@@ -424,9 +428,8 @@
 	    font-size: 60px!important;
 	    font-family: pier!important;
 	    font-weight: 600!important;
-	    left: 160px!important;
 	    color: #ee5b96!important;
-	    width: 100%!important;
+	    width: 75%!important;
 	    left: 55px!important;
 	}
 
@@ -439,9 +442,11 @@
 	}
 }
 
-@media (max-width: 330px){
+@media (max-width: 380px){
 	#home h1#crumble{
-    	left: 36px !important;		
+    	left: 36px !important;	
+	    width: 75%!important;
+
 	}
 
 	#home h2{    
@@ -449,7 +454,6 @@
 	}
 
 	#skills #languages .chart > span > div {
-	    height: 0px!important;
 	    display: inline-block!important;
 	    text-align: center!important;
 	    width: 34px!important;
@@ -473,6 +477,10 @@
 	    position: absolute !important;
 	    left: 3% !important;
 	    padding-top: 13vh;
+
+	    h1{
+	    	top: -14vh!important;
+	    }
 
 	    h2{
 
@@ -520,7 +528,7 @@
 	.moneyz {
 	    position: absolute !important;
 	    top: 29vh !important;
-		left: 15px !important;	    
+		left: 5px !important;	    
 		background: #c85180 !important;
 	    z-index: 995 !important;
 	    padding: 2px !important;
@@ -530,4 +538,8 @@
 	.moneyz input, .moneyz textarea {
 	    width: 80vw!important;
     }	
+
+    .moneyz textarea{
+		height: 30vh
+    }
 } 

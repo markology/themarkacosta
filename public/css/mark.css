@@ -1,11 +1,14 @@
 @import "https://fonts.googleapis.com/css?family=La+Belle+Aurore";
 @import "https://fonts.googleapis.com/css?family=Quicksand:300,400";
 @import "https://fonts.googleapis.com/css?family=Reem+Kufi";
-#about #line > div:first-of-type {
-  margin-bottom: 17px; }
-#about #line span {
-  display: inline-block;
-  margin-left: 5px; }
+#about #line {
+  max-height: 80vh;
+  overflow-y: scroll; }
+  #about #line > div:first-of-type {
+    margin-bottom: 17px; }
+  #about #line span {
+    display: inline-block;
+    margin-left: 5px; }
 #about > span {
   position: absolute;
   color: white;
@@ -103,88 +106,93 @@
     z-index: 995;
     right: -188px; }
 
-#skills > p {
-  color: white;
-  font-family: Azedo;
-  position: absolute;
-  top: calc(13vh + 76px);
-  width: 250px;
-  left: 104px;
-  z-index: 995;
-  line-height: 1.4;
-  font-family: 'Reem Kufi', sans-serif; }
-  #skills > p:nth-of-type(2n + 2) {
-    top: calc(27vh + 99px); }
-  #skills > p:nth-of-type(2n + 3) {
-    top: calc(31vh + 193px); }
-#skills .svg-container {
-  transition: transform 1s ease;
-  transform: rotate(180deg); }
-#skills h1 {
-  font-family: pier;
-  font-size: 60px;
-  position: absolute;
-  color: white;
-  top: 7vh;
-  left: 130px;
-  z-index: 994;
-  cursor: default; }
-  #skills h1 span {
-    display: inline-block;
-    position: relative;
-    font-family: pier;
-    font-size: 60px;
-    /* position: absolute; */
-    color: white;
-    /* top: 7vh; */
-    opacity: 0;
-    width: auto;
-    transition: color .1s ease,transform .3s ease; }
-    #skills h1 span:hover {
-      color: #ee5b96;
-      transition: color .1s ease; }
-#skills #languages {
-  position: absolute;
-  top: calc(7vh - 28px);
-  z-index: 995;
-  left: calc(379px + 7vw);
-  height: 400px; }
-  #skills #languages .chart {
-    top: 300px;
-    left: 500px;
-    display: inline-block;
-    z-index: 995;
-    margin: 12px;
-    text-align: center;
-    width: 7vw;
-    height: 400px;
-    transition: transform .2s ease;
-    -webkit-transition: transform .2s ease;
-    transform: scale(1) translateY(0px); }
-    #skills #languages .chart:hover {
-      transition: transform .2s ease;
-      -webkit-transition: transform .2s ease;
-      transform: scale(1.1) translateY(-23px); }
-    #skills #languages .chart > span {
-      top: auto;
-      position: absolute;
-      bottom: 0;
-      margin: 0 11px;
-      display: block;
-      vertical-align: bottom;
-      left: auto; }
-      #skills #languages .chart > span > div {
-        height: 0px;
-        display: inline-block;
-        text-align: center;
-        width: 50px;
-        box-shadow: -2px 2px 8px 0px black; }
-    #skills #languages .chart p {
+#skills {
+  overflow-y: scroll; }
+  #skills > div {
+    height: 90vh;
+    position: relative; }
+    #skills > div > p {
       color: white;
+      font-family: Azedo;
+      position: absolute;
+      top: calc(13vh + 76px);
+      width: 250px;
+      left: 104px;
+      z-index: 995;
+      line-height: 1.4;
+      font-family: 'Reem Kufi', sans-serif; }
+      #skills > div > p:nth-of-type(2n + 2) {
+        top: calc(27vh + 99px); }
+      #skills > div > p:nth-of-type(2n + 3) {
+        top: calc(31vh + 193px); }
+    #skills > div .svg-container {
+      transition: transform 1s ease;
+      transform: rotate(180deg); }
+    #skills > div h1 {
       font-family: pier;
-      font-size: .7rem;
-      text-align: center;
-      text-shadow: 1px 2px 2px black; }
+      font-size: 60px;
+      position: absolute;
+      color: white;
+      top: 7vh;
+      left: 130px;
+      z-index: 994;
+      cursor: default; }
+      #skills > div h1 span {
+        display: inline-block;
+        position: relative;
+        font-family: pier;
+        font-size: 60px;
+        /* position: absolute; */
+        color: white;
+        /* top: 7vh; */
+        opacity: 0;
+        width: auto;
+        transition: color .1s ease,transform .3s ease; }
+        #skills > div h1 span:hover {
+          color: #ee5b96;
+          transition: color .1s ease; }
+    #skills > div #languages {
+      position: absolute;
+      top: calc(7vh - 28px);
+      z-index: 995;
+      left: calc(379px + 7vw);
+      height: 400px; }
+      #skills > div #languages .chart {
+        top: 300px;
+        left: 500px;
+        display: inline-block;
+        z-index: 995;
+        margin: 12px;
+        text-align: center;
+        width: 7vw;
+        height: 400px;
+        transition: transform .2s ease;
+        -webkit-transition: transform .2s ease;
+        transform: scale(1) translateY(0px); }
+        #skills > div #languages .chart:hover {
+          transition: transform .2s ease;
+          -webkit-transition: transform .2s ease;
+          transform: scale(1.1) translateY(-23px); }
+        #skills > div #languages .chart > span {
+          top: auto;
+          position: absolute;
+          bottom: 0;
+          margin: 0 11px;
+          display: block;
+          vertical-align: bottom;
+          left: auto; }
+          #skills > div #languages .chart > span > div {
+            height: 0px;
+            display: inline-block;
+            text-align: center;
+            width: 50px;
+            box-shadow: -2px 2px 8px 0px black; }
+        #skills > div #languages .chart p {
+          color: white;
+          font-family: pier;
+          font-size: .7rem;
+          text-align: center;
+          text-shadow: 1px 2px 2px black; }
 
 #basics {
   z-index: 995;
@@ -1136,6 +1144,9 @@ svg#svg1 {
   #close {
     top: 13vh !important; } }
 @media (max-width: 500px) {
+  #line {
+    max-height: calc(89vh - 137px) !important; }
+
   #nav #nav-items li {
     height: 45px !important;
     position: relative !important;
@@ -1179,7 +1190,7 @@ svg#svg1 {
     font-weight: 100 !important;
     letter-spacing: 6px !important;
     z-index: 997 !important;
-    width: 93% !important;
+    width: 80% !important;
     left: 12% !important;
     top: calc(49vh + 139px) !important;
     /* text-shadow: 0px 3px 3px black!important; */ }
@@ -1213,7 +1224,7 @@ svg#svg1 {
     z-index: 995 !important;
     margin: 12px !important;
     text-align: center !important;
-    width: 13vw !important;
+    width: 11vw !important;
     height: 400px !important;
     transition: transform 0.2s ease !important;
     -webkit-transition: transform 0.2s ease !important;
@@ -1240,7 +1251,7 @@ svg#svg1 {
     top: calc(137vh) !important;
     left: 0px !important; }
 
-  #skills > p {
+  #skills > div > p {
     color: white !important;
     font-family: Azedo !important;
     position: absolute !important;
@@ -1264,9 +1275,9 @@ svg#svg1 {
     margin-bottom: 33px !important; }
 
   #projects {
-    top: 21vh !important;
+    top: 29vh !important;
     position: absolute !important;
-    left: 31% !important;
+    left: 1% !important;
     display: block !important;
     width: 100% !important; }
     #projects h1 {
@@ -1274,7 +1285,7 @@ svg#svg1 {
       width: 100% !important;
       text-align: center !important;
       left: 0 !important;
-      top: -10vh !important; }
+      top: -25vh !important; }
     #projects .project h3 {
       box-shadow: none !important; }
 
@@ -1305,7 +1316,7 @@ svg#svg1 {
   .moneyz {
     position: absolute !important;
     top: 29vh !important;
-    left: 11px !important; }
+    left: 11% !important; }
 
   #contact h1 {
     font-family: pier !important;
@@ -1326,9 +1337,8 @@ svg#svg1 {
     font-size: 60px !important;
     font-family: pier !important;
     font-weight: 600 !important;
-    left: 160px !important;
     color: #ee5b96 !important;
-    width: 100% !important;
+    width: 75% !important;
     left: 55px !important; }
 
   #canvas {
@@ -1336,15 +1346,15 @@ svg#svg1 {
 
   #projects .proejects#Razu {
     margin-bottom: 33px !important; } }
-@media (max-width: 330px) {
+@media (max-width: 380px) {
   #home h1#crumble {
-    left: 36px !important; }
+    left: 36px !important;
+    width: 75% !important; }
 
   #home h2 {
     left: 38px !important; }
 
   #skills #languages .chart > span > div {
-    height: 0px !important;
     display: inline-block !important;
     text-align: center !important;
     width: 34px !important; }
@@ -1363,6 +1373,8 @@ svg#svg1 {
     position: absolute !important;
     left: 3% !important;
     padding-top: 13vh; }
+    #projects h1 {
+      top: -14vh !important; }
     #projects h2 {
       font-family: Azedo !important;
       color: #ca5282 !important;
@@ -1399,7 +1411,7 @@ svg#svg1 {
   .moneyz {
     position: absolute !important;
     top: 29vh !important;
-    left: 15px !important;
+    left: 5px !important;
     background: #c85180 !important;
     z-index: 995 !important;
     padding: 2px !important;
@@ -1407,7 +1419,10 @@ svg#svg1 {
     width: 90vw !important; }
 
   .moneyz input, .moneyz textarea {
-    width: 80vw !important; } }
+    width: 80vw !important; }
+
+  .moneyz textarea {
+    height: 30vh; } }
 html, body, #the-mark-acosta, #content {
   margin: 0px;
   height: 100%;

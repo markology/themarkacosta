@@ -1,6 +1,8 @@
 
 #about{
 	#line{
+	    max-height: 80vh;
+	    overflow-y: scroll;		
 		& > div:first-of-type{
     		margin-bottom: 17px;			
 		}

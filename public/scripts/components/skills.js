@@ -10,7 +10,7 @@ export class Skills extends React.Component{
 
 	componentDidMount(){
 		// anim($('#projects-link'), 0, 1900)
-		anim($('#skills').children('h1')[0], 7, 1900)
+		anim($('#skill-title'), 7, 1900)
 		anim($('#skills').children('p'), 379, 1900)		
 		bars();
 		donuts();
@@ -22,7 +22,8 @@ export class Skills extends React.Component{
 	render(){
 		return(
 			<div id="skills">
-				<h1>
+			<div>
+				<h1 id="skill-title">
 					<span>S</span>
 					<span>k</span>
 					<span>i</span>
@@ -89,7 +90,7 @@ export class Skills extends React.Component{
 				        <div id="gulp"></div>
 				    </div>					    			    				    				    
 				</div>										
-															
+					</div>										
 			</div>
 			)
 	}
