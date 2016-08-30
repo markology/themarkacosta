@@ -8,7 +8,11 @@
     margin-bottom: 17px; }
   #about #line span {
     display: inline-block;
-    margin-left: 5px; }
+    margin-left: 5px;
+    transition: .3s color ease; }
+    #about #line span:hover {
+      color: #6ee3ff;
+      transition: .3s color ease; }
 #about > span {
   position: absolute;
   color: white;
@@ -16,8 +20,8 @@
   font-weight: 500;
   font-size: .9rem;
   width: 600px;
-  line-height: 1.4;
-  letter-spacing: 0px;
+  line-height: 1.9;
+  letter-spacing: px;
   text-shadow: 0px 0px; }
   #about > span#coder {
     top: calc(194px + 24vh);
@@ -255,8 +259,8 @@
   -webkit-transform: scale(1);
   transition: scale .5s ease; }
   #projects h1.bottom-orbit {
-    transform: scale(1);
-    -webkit-transform: scale(1);
+    transform: scale(0);
+    -webkit-transform: scale(0);
     transition: scale .5s ease; }
   #projects h1 span {
     display: inline-block;
@@ -900,6 +904,17 @@ svg#svg1 {
   z-index: 9;
   outline: none; }
 
+@-moz-document url-prefix() {
+  svg#svg1 {
+    right: 2vw;
+    width: 600px;
+    height: 800px;
+    right: 10vw;
+    top: -39vh;
+    transform: scale(1); }
+
+  #astronaut {
+    display: block; } }
 #canvas {
   position: absolute;
   left: 45px;
@@ -997,6 +1012,12 @@ svg#svg1 {
   #home #contact-button:hover {
     background: #ee5b96;
     color: #232323; }
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  #home {
+    /* Safari only override */ }
+    #home ::i-block-chrome, #home #contact-button {
+      height: auto;
+      padding: 4px; } }
 
 @media (max-width: 1215px) {
   svg#svg1 {

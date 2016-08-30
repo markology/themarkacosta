@@ -12,8 +12,8 @@
       -webkit-transform: scale(1);
   	  transition: scale .5s ease;
       &.bottom-orbit{
-  	  transform: scale(1);
-      -webkit-transform: scale(1);
+  	  transform: scale(0);
+      -webkit-transform: scale(0);
       	transition: scale .5s ease;
       } 
       span{

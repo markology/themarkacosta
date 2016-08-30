@@ -72,32 +72,34 @@ export function rotate(){
 
 export function lines(){
 	  
-	// var words = 
-	$('#line').children('div').each(function(){
-		$(this).mouseover(function(){
-		    $(this).addClass('rubberBandLight').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
-		      $(this).removeClass('rubberBandLight')
-		    });
-		  })
-	})
-	// var spans = [];
+	var words = 
+	$($('#line').children('div')[0]).text().split('. ')
 
-	// for(var x in words){
-	// 	var t = document.createElement('span');
-	// 	var newContent = document.createTextNode(words[x] + ' '); 
-	// 	t.appendChild(newContent);
-	// 	spans.push(t); 
+	// .each(function(){
+	// 	$(this).mouseover(function(){
+	// 	    $(this).addClass('rubberBandLight').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+	// 	      $(this).removeClass('rubberBandLight')
+	// 	    });
+	// 	  })
+	// })
+	var spans = [];
 
-	// }
-	// $('#line').html('');
-	// for(var x  in spans){
+	for(var x in words){
+		var t = document.createElement('span');
+		var newContent = document.createTextNode(words[x] + '. '); 
+		t.appendChild(newContent);
+		spans.push(t); 
+
+	}
+	$('#line').html('');
+	for(var x  in spans){
 	// 	$(spans[x]).mouseover(function(){
 	// 	    $(this).addClass('rubberBandLight').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
 	// 	      $(this).removeClass('rubberBandLight')
 	// 	    });
 	// 	  })
-	// 	$('#line').prepend(spans[spans.length - x- 1]);
-	// }
+		$('#line').prepend(spans[spans.length - x- 1] );
+	}
 	  	
 
 }

@@ -29,7 +29,7 @@ export class Hu extends React.Component{
 							<div>
 								<h3>API</h3>
 								<p>
-								My jobs at Hu's main focus was to make the backend for the UI team to integrate. The snippet to the right only features publicly available information using MongoDB/MongooseJS.
+								My jobs at Hu's main focus was to make the backend for the UI team to integrate. The snippet to the right features code using MongoDB/MongooseJS.
 								</p>							
 							</div>
 									
@@ -58,7 +58,7 @@ export class Hu extends React.Component{
 							<div>
 								<h3>Modeling</h3>
 								<p>
-									I love MongooseJS. Its a library that makes MongoDB user friendly for JS use. Shown here is a user model schema for the api to handle information storage and user credentials.
+									I love MongooseJS. Its a library that makes MongoDB functions easily available in JS . Shown here is a user model schema for the api to handle information storage and user credentials.
 								</p>							
 							</div>
 						</div>

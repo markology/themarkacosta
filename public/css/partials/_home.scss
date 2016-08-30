@@ -8,6 +8,19 @@ svg#svg1{
     outline:none
 }
 
+@-moz-document url-prefix(){
+	svg#svg1{
+		right: 2vw;
+		width: 600px;
+		height: 800px;
+		right: 10vw;
+		top: -39vh;
+		transform: scale(1);		
+	}
+
+	#astronaut{ display:block}
+}
+
 #canvas{
     position: absolute;
     // top: calc(34% - 295px);
@@ -131,4 +144,14 @@ svg#svg1{
 	    }
 	}
 
+@media screen and (-webkit-min-device-pixel-ratio:0) { 
+
+/* Safari only override */
+::i-block-chrome,#contact-button {
+	height:auto;
+	padding: 4px;
+
+}	
+
+}
 }
