@@ -3,9 +3,6 @@
 @import "https://fonts.googleapis.com/css?family=Reem+Kufi";
 #about #line {
   max-height: 80vh;
-  overflow-y: auto;
-  position: relative;
-  overflow-x: visible;
   height: 80vh; }
   #about #line > div:first-of-type {
     margin-bottom: 17px; }
@@ -1201,7 +1198,10 @@ svg#svg1 {
     margin-top: 1vh !important; }
 
   #line {
-    max-height: calc(89vh - 137px) !important; }
+    max-height: calc(89vh - 137px) !important;
+    overflow-y: auto;
+    position: relative;
+    overflow-x: visible; }
 
   #nav #nav-items li {
     height: 45px !important;
