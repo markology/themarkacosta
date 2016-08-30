@@ -24,6 +24,7 @@
 		}
 		.svg-container{
 		    transition: transform 1s ease;
+		    -webkit-transform: rotate(180deg);		
 		    transform: rotate(180deg);		
 		}
 		h1{

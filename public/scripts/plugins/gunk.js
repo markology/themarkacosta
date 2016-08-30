@@ -137,7 +137,7 @@ export  function gunk(b, refresh){
 	    var mouse = {},
 	    hovered = false,
 	    colors = ["225, 190, 44", "225, 190, 44", "225, 190, 44"];
-	    b.state.minDist =40;
+	    b.state.minDist =25;
 	    var bounceFactor = .4;
 		b.state.W = 1000,
 	    b.state.H = 800;
@@ -147,11 +147,7 @@ export  function gunk(b, refresh){
 		canvas.height =  800;
 		chip();
 
-		$('#the-mark-acosta').on("mousemove", function(e) {
-		  // console.log(e)
-		  mouse.x = e.clientX - 45 ;
-		  mouse.y = e.clientY - 295 ;
-		});
+		
 
 		// Particle Object
 		
@@ -169,7 +165,18 @@ export  function gunk(b, refresh){
 
 		// Get pixel positions
 		$('#the-mark-acosta').append(canvas)
+		$('#canvas').on("mousemove", function(e) {
+				var rect = canvas.getBoundingClientRect(), // abs. size of element
+				      scaleX = canvas.width / rect.width,    // relationship bitmap vs. element for X
+				      scaleY = canvas.height / rect.height;  // relationship bitmap vs. element for Y
 
+			
+				        // been adjusted to be relative to element
+				  
+			  mouse.x =	(e.clientX - rect.left) * scaleX,   // scale mouse coordinates after they have
+
+			  mouse.y =(e.clientY - rect.top) * scaleY;
+			});
 		document.fonts.ready.then(function () {
 			drawText(b)
 			positionParticles(b);

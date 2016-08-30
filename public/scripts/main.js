@@ -56,6 +56,7 @@ class TheMarkAcosta extends React.Component {
     var isFirefox = typeof InstallTrigger !== 'undefined';
     var isIE = /*@cc_on!@*/false || !!document.documentMode;
     var isEdge = !isIE && !!window.StyleMedia;
+    var isSafari = Object.prototype.toString.call(window.HTMLElement).indexOf('Constructor') > 0;
 
     if(!this.state.firstLoadHome){
 
@@ -76,28 +77,28 @@ class TheMarkAcosta extends React.Component {
 
     if(this.state.activeItem == 'Home' )
     {
-      if(!isFirefox)
+      if(!isFirefox || isSafari)
       $($('canvas')[1]).show() ;    
       h = <Home  first={this.state.firstLoad} onUpdate={this.update.bind(this)} />
     }
   	else if( this.state.activeItem == "About"){
-      if(!isFirefox)
+      if(!isFirefox || isSafari)
       $($('canvas')[1]).hide();  		
       h = <About onUpdate={this.update.bind(this)} />
     }
   	else if( this.state.activeItem == "Skills"){
-      if(!isFirefox)
+      if(!isFirefox || isSafari)
       $($('canvas')[1]).hide();  		
       h = <Skills />  		
     }
   	else if( this.state.activeItem == "Projects"){
-      if(!isFirefox)
+      if(!isFirefox || isSafari)
       $($('canvas')[1]).hide();  		
       h = <Projects />
     }
   	else if( this.state.activeItem == "Contact"){
-      if(!isFirefox)
-      $($('canvas')[1]).hide() ; 		
+      if(!isFirefox || isSafari)
+        $($('canvas')[1]).hide() ; 		
       h =  <Contact />  
     }
   	else{h = <h1>Invalid Choice</h1>}  		  		  	

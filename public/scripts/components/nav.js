@@ -10,7 +10,7 @@ export var items = [
 
 
 export var socials = [
-      {"icon": "fa fa-github", "option": "GitHub", "url": "http://www.github.com/papasquats"}];
+      {"icon": "fa fa-github", "option": "GitHub", "url": "http://www.github.com/markology"}];
 
 
 

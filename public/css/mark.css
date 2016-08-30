@@ -125,6 +125,7 @@
       top: calc(31vh + 193px); }
   #skills > div .svg-container {
     transition: transform 1s ease;
+    -webkit-transform: rotate(180deg);
     transform: rotate(180deg); }
   #skills > div h1 {
     font-family: pier;
@@ -251,9 +252,11 @@
   z-index: 994;
   cursor: default;
   transform: scale(1);
+  -webkit-transform: scale(0);
   transition: scale .5s ease; }
   #projects h1.bottom-orbit {
-    transform: scale(0);
+    transform: scale(1);
+    -webkit-transform: scale(0);
     transition: scale .5s ease; }
   #projects h1 span {
     display: inline-block;
@@ -281,6 +284,7 @@
   box-shadow: 0px 0px 0px 4px #e1be2c inset,0px 0px 10px 6px black inset; }
   #projects .project:hover > span {
     transform: scale(1.1);
+    -webkit-transform: scale(1.1);
     transition: transform 0.3s ease; }
   #projects .project > span {
     z-index: 993;
@@ -300,6 +304,7 @@
     /* margin: 60px; */
     height: 26vw;
     width: 26vw;
+    -webkit-transform: scale(0);
     transform: scale(0);
     transition: transform 0.3s ease;
     cursor: pointer; }
@@ -331,29 +336,38 @@
     z-index: 3;
     animation: none; }
     #projects .project.active#Razu {
-      transform: translateX(0vw) scale(1); }
+      transform: translateX(0vw) scale(1);
+      -webkit-transform: translateX(0vw) scale(1); }
     #projects .project.active#Tell {
-      transform: translateX(-60vw) scale(1); }
+      transform: translateX(-60vw) scale(1);
+      -webkit-transform: translateX(-60vw) scale(1); }
     #projects .project.active#VU {
-      transform: translateX(-30vw) scale(1); }
+      transform: translateX(-30vw) scale(1);
+      -webkit-transform: translateX(-30vw) scale(1); }
   #projects .project.top-orbit {
     z-index: 2;
     animation: none; }
     #projects .project.top-orbit#Razu {
-      transform: scale(0); }
+      transform: scale(0);
+      -webkit-transform: scale(0); }
     #projects .project.top-orbit#Tell {
-      transform: scale(0); }
+      transform: scale(0);
+      -webkit-transform: scale(0); }
     #projects .project.top-orbit#VU {
-      transform: scale(0); }
+      transform: scale(0);
+      -webkit-transform: scale(0); }
   #projects .project.bottom-orbit {
     z-index: 1;
     animation: none; }
     #projects .project.bottom-orbit#Razu {
-      transform: scale(0); }
+      transform: scale(0);
+      -webkit-transform: scale(0); }
     #projects .project.bottom-orbit#Tell {
-      transform: scale(0); }
+      transform: scale(0);
+      -webkit-transform: scale(0); }
     #projects .project.bottom-orbit#VU {
-      transform: scale(0); }
+      transform: scale(0);
+      -webkit-transform: scale(0); }
   #projects .project#Razu {
     background-image: url("/assets/razu.png");
     background-size: cover;
@@ -391,16 +405,20 @@
   box-shadow: 1px 1px 3px 1px black;
   text-align: center;
   transform: scale(0);
+  -webkit-transform: scale(0);
   transition: transform .5s ease;
   cursor: pointer; }
   #projects #close.open {
     transform: scale(1);
+    -webkit-transform: scale(1);
     transition: transform .5s ease; }
     #projects #close.open:hover {
+      -webkit-transform: scale(1.1);
       transform: scale(1.1);
       transition: transform .5s ease; }
 
 #project-container {
+  -webkit-transform: translateX(100vw);
   transform: translateX(100vw);
   position: relative;
   display: block;
@@ -412,6 +430,7 @@
     #project-container iframe body {
       background-color: #181818 !important; }
   #project-container.enable {
+    -webkit-transform: translateX(0vw);
     transform: translateX(0vw);
     transition: transform .7s ease; }
 
@@ -877,6 +896,7 @@ svg#svg1 {
   right: 25vw;
   top: 20px;
   transform: scale(1.9);
+  -webkit-transform: scale(1.9);
   z-index: 9; }
 
 #canvas {
