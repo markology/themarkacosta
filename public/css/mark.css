@@ -252,11 +252,11 @@
   z-index: 994;
   cursor: default;
   transform: scale(1);
-  -webkit-transform: scale(0);
+  -webkit-transform: scale(1);
   transition: scale .5s ease; }
   #projects h1.bottom-orbit {
     transform: scale(1);
-    -webkit-transform: scale(0);
+    -webkit-transform: scale(1);
     transition: scale .5s ease; }
   #projects h1 span {
     display: inline-block;
@@ -897,11 +897,13 @@ svg#svg1 {
   top: 20px;
   transform: scale(1.9);
   -webkit-transform: scale(1.9);
-  z-index: 9; }
+  z-index: 9;
+  outline: none; }
 
 #canvas {
   position: absolute;
   left: 45px;
+  outline: none;
   top: calc(59px + 34%); }
 
 #home h2 {

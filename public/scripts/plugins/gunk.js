@@ -177,10 +177,10 @@ export  function gunk(b, refresh){
 
 			  mouse.y =(e.clientY - rect.top) * scaleY;
 			});
-		document.fonts.ready.then(function () {
+		document.fonts.onloadingdone  = function () {
 			drawText(b)
 			positionParticles(b);
-		});	
+		};	
 		// Update
 		function update() {
 		  clear();

@@ -5,12 +5,14 @@ svg#svg1{
     transform: scale(1.9);
     -webkit-transform: scale(1.9);
     z-index: 9;	
+    outline:none
 }
 
 #canvas{
     position: absolute;
     // top: calc(34% - 295px);
      left: 45px;
+     outline: none;
     top: calc(59px + 34%);
     }
 

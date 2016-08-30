@@ -16,18 +16,18 @@ export class Home extends React.Component{
 			anim($('#greeting'), 3, 1100)
 			anim($('#title'), 13, 1100)
 			anim($('#contact-button'), 0, 1100)
-		    if(!isFirefox){
+		    // if(!isFirefox){
 			  logo();    	      	
-		    }		
+		    // }		
 		}
 		else{
 			anim($('#greeting'), 3, 2900)
 			anim($('#title'), 13, 2900)
 			anim($('#contact-button'), 0, 2900)	
 
-		    if(!isFirefox){
+		    // if(!isFirefox){
 			  logo();    	      	
-		    }
+		    // }
 
 					
 		}
