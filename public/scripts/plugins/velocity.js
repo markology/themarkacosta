@@ -72,8 +72,8 @@ export function rotate(){
 
 export function lines(){
 	  
-	var words = 
-	$($('#line').children('div')[0]).text().split('. ')
+	var words = $($('#line').children('div')[0]).text().split('. ')
+	var words2 = $($('#line').children('div')[1]).text().split('. ')
 
 	// .each(function(){
 	// 	$(this).mouseover(function(){
@@ -91,15 +91,38 @@ export function lines(){
 		spans.push(t); 
 
 	}
-	$('#line').html('');
+	$('#line').html('<div><p></p></div>');
 	for(var x  in spans){
 	// 	$(spans[x]).mouseover(function(){
 	// 	    $(this).addClass('rubberBandLight').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
 	// 	      $(this).removeClass('rubberBandLight')
 	// 	    });
 	// 	  })
-		$('#line').prepend(spans[spans.length - x- 1] );
+		$($('#line').children('div')[0]).prepend(spans[spans.length - x- 1] );
 	}
+
+	$($($('#line').children('div')[0]).children('p')[0]).append(document.createElement('p').appendChild(document.createTextNode('I hear it so much that sometimes that I actually start to believe my name it "You need to take a break".'))) 
+
+var spans1 = [];
+
+	for(var x in words2){
+		var t = document.createElement('span');
+		var newContent = document.createTextNode(words2[x] + '. '); 
+		t.appendChild(newContent);
+		spans1.push(t); 
+
+	}
+	$('#line').append('<div></div>');
+
+	for(var x  in spans1){
+	// 	$(spans[x]).mouseover(function(){
+	// 	    $(this).addClass('rubberBandLight').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+	// 	      $(this).removeClass('rubberBandLight')
+	// 	    });
+	// 	  })
+		$($('#line').children('div')[1]).prepend(spans1[spans1.length - x- 1] );
+	}
+
 	  	
 
 }

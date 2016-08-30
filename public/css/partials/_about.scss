@@ -7,14 +7,28 @@
 		& > div:first-of-type{
     		margin-bottom: 17px;			
 		}
+		div{
+			font-style: italic;
+			p{
+				display:inline;
+				font-weight: 600;
+				font-style: italic;
+			}
+		}
 		span{
-		    display: inline-block;
+		    display: inline;
 		    margin-left: 5px;
 		    transition: .3s color ease;
 		    &:hover{
 		    	color: #6ee3ff;
 		    	transition: .3s color ease;
-		    }		    			
+		    }		
+
+		    & > span{
+		    	font-weight: bold;
+		    	font-style: italic;
+		    	margin-bottom: 10px;
+		    }    			
 		}
 	}
 	& > span{
@@ -24,7 +38,7 @@
 	    font-weight: 500;
 	    font-size: .9rem;
 	    width: 600px;
-	    line-height: 1.9;
+	    line-height: 1.7;
 	    letter-spacing: px;
 	    text-shadow: 0px 0px;
 
