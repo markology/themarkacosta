@@ -177,7 +177,7 @@ export  function gunk(b, refresh){
 
 			  mouse.y =(e.clientY - rect.top) * scaleY;
 			});
-		document.fonts.onloadingdone  = function () {
+		document.fonts.onloadingdone  =  ()  => {
 			drawText(b)
 			positionParticles(b);
 		};	
