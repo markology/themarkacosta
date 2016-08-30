@@ -1,23 +1,22 @@
-react-webpack-express
+#www.themarkacosta.com
 =====================
 
-Boilerplate to start developing npm react components with webpack. Includes flux as npm module.
+I have made my portfolio source code viewable so other developers may have references to anything they found interesting. This repo is not editable. 
+###Languages
 
+-ReactJS
+-Redux
+-NodeJS
+-ExpressJS
+-jQuery
 
-Usage
-=====
+###Usage
 
-```
-git clone https://github.com/mixxen/react-webpack-express.git myapp
-cd myapp
-npm install
-npm run build
+git clone https://github.com/markology/themarkacosta.git
+cd themarkacosta
+npm run start
 npm run server
 open http://localhost:3000
 ```
-Use `npm start` to run webpack watch.
 
-License
-=======
 
-MIT
