@@ -7,11 +7,17 @@
   #about #line > div:first-of-type {
     margin-bottom: 17px; }
   #about #line div {
-    font-style: italic; }
+    font-style: italic;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
+    -webkit-font-smoothing: antialiased; }
     #about #line div p {
       display: inline;
       font-weight: 600;
-      font-style: italic; }
+      font-style: normal;
+      -webkit-font-smoothing: antialiased;
+      font-size: 1rem;
+      text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
+      display: block; }
   #about #line span {
     display: inline;
     margin-left: 5px;
