@@ -9,10 +9,17 @@
 		}
 		div{
 			font-style: italic;
+			    text-shadow: 1px 1px 1px rgba(0,0,0,0.004);	
+			    -webkit-font-smoothing: antialiased;
+			    		
 			p{
-				display:inline;
-				font-weight: 600;
-				font-style: italic;
+			    display: inline;
+			    font-weight: 600;
+			    font-style: normal;
+			    -webkit-font-smoothing: antialiased;
+			    font-size: 1rem;
+			    text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
+			    display: block;
 			}
 		}
 		span{
