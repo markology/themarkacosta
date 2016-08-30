@@ -902,11 +902,11 @@ svg#svg1 {
 #canvas {
   position: absolute;
   left: 45px;
-  top: calc(59px + 34vh); }
+  top: calc(59px + 34%); }
 
 #home h2 {
   position: absolute;
-  top: calc(32vh - 48px);
+  top: calc(32% - 48px);
   left: 161px;
   color: white;
   font-family: pier;
@@ -923,7 +923,7 @@ svg#svg1 {
       color: #ee5b96;
       transition: color .1s ease; }
 #home h1#crumble {
-  top: 34vh;
+  top: 34%;
   position: absolute;
   font-size: 60px;
   font-family: pier;
@@ -933,7 +933,7 @@ svg#svg1 {
 #home h3 {
   position: absolute;
   color: white;
-  top: calc(34vh + 35px);
+  top: calc(34% + 35px);
   font-size: 60px;
   left: 140px;
   font-family: pier;
@@ -951,7 +951,7 @@ svg#svg1 {
       transition: color .1s ease; }
 #home #title-under {
   position: absolute;
-  top: 52.6vh;
+  top: 52.6%;
   font-family: Azedo;
   color: #f7d237;
   font-size: .8rem;
@@ -959,7 +959,7 @@ svg#svg1 {
   font-weight: 100;
   letter-spacing: 6px;
   z-index: 997;
-  top: calc(35vh + 139px);
+  top: calc(35% + 139px);
   /* text-shadow: 0px 3px 3px black; */ }
   #home #title-under > span:last-of-type {
     margin-left: 2px; }
@@ -976,7 +976,7 @@ svg#svg1 {
   background-position: right;
   z-index: 99; }
 #home #contact-button {
-  top: calc(41vh + 175px);
+  top: calc(41% + 175px);
   position: absolute;
   left: 176px;
   font-size: 2rem;
@@ -1576,12 +1576,14 @@ html, body, #the-mark-acosta, #content {
 .rubberBand {
   -webkit-animation-name: rubberBand;
   animation-name: rubberBand;
-  animation-duration: 1.2s; }
+  animation-duration: 1.2s;
+  -webkit-animation-duration: 1.2s; }
 
 .rubberBandLight {
   -webkit-animation-name: rubberBandLight;
   animation-name: rubberBandLight;
-  animation-duration: 1.2s; }
+  animation-duration: 1.2s;
+  -webkit-animation-duration: 1.2s; }
 
 @-webkit-keyframes rubberBand {
   0% {

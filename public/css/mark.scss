@@ -115,14 +115,16 @@ body{
 .rubberBand{
     -webkit-animation-name: rubberBand;
     animation-name: rubberBand;
-      animation-duration: 1.2s;
+    animation-duration: 1.2s;
+    -webkit-animation-duration: 1.2s;
 
 }
 
 .rubberBandLight{
     -webkit-animation-name: rubberBandLight;
     animation-name: rubberBandLight;
-      animation-duration: 1.2s;
+    animation-duration: 1.2s;
+    -webkit-animation-duration: 1.2s;
 
 }
 
