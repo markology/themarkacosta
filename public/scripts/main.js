@@ -38,7 +38,7 @@ class TheMarkAcosta extends React.Component {
 
         gunk(this);
         particle();
-      }
+      // }
   }
 
   update(state){
