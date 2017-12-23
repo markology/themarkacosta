@@ -1,4 +1,3 @@
-
 import circliful from './../../js/donuts.js'
 
 export function donuts(){
@@ -7,7 +6,7 @@ export function donuts(){
         foregroundBorderWidth: 5,
         backgroundBorderWidth: 5,
         foregroundColor: '#fdea5b',
-        backgroundColor: 'black',        
+        backgroundColor: 'black',
         percent: 94,
         noPercentageSign: true,
         text: 'MongoDB',
@@ -19,7 +18,7 @@ export function donuts(){
         targetTextSize: '15',
         textAdditionalCss: 'font-family: pier; fill: white;',
         delay: 2350
-    });  
+    });
 
 
       $("#sass").circliful({
@@ -27,7 +26,7 @@ export function donuts(){
         foregroundBorderWidth: 5,
         backgroundBorderWidth: 5,
         foregroundColor: '#39f3c9',
-        backgroundColor: 'black',        
+        backgroundColor: 'black',
         percent: 97,
         noPercentageSign: true,
         text: 'CSS',
@@ -39,14 +38,14 @@ export function donuts(){
         targetTextSize: '15',
         textAdditionalCss: 'font-family: pier; fill: white;',
         delay: 2350
-    });           
+    });
 
       $("#html").circliful({
         animationStep: 18,
         foregroundBorderWidth: 5,
         backgroundBorderWidth: 5,
         foregroundColor: '#fdea5b',
-        backgroundColor: 'black',        
+        backgroundColor: 'black',
         percent: 97,
         noPercentageSign: true,
         text: 'Markup',
@@ -58,14 +57,14 @@ export function donuts(){
         targetTextSize: '15',
         textAdditionalCss: 'font-family: pier; fill: white;',
         delay: 2350
-    });      
+    });
 
       $("#git").circliful({
         animationStep: 18,
         foregroundBorderWidth: 5,
         backgroundBorderWidth: 5,
         foregroundColor: '#fb506e',
-        backgroundColor: 'black',        
+        backgroundColor: 'black',
         percent: 90,
         noPercentageSign: true,
         text: 'Git',
@@ -77,14 +76,14 @@ export function donuts(){
         targetTextSize: '15',
         textAdditionalCss: 'font-family: pier; fill: white;',
         delay: 2350
-    });    
+    });
 
       $("#gulp").circliful({
         animationStep: 18,
         foregroundBorderWidth: 5,
         backgroundBorderWidth: 5,
         foregroundColor: '#61e1ff',
-        backgroundColor: 'black',        
+        backgroundColor: 'black',
         percent: 90,
         noPercentageSign: true,
         text: 'Gulp',
@@ -96,9 +95,5 @@ export function donuts(){
         targetTextSize: '15',
         textAdditionalCss: 'font-family: pier; fill: white;',
         delay: 2350
-    });   
-
-
-
-                      
+    });
 }

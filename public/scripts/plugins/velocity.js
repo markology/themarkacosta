@@ -6,7 +6,7 @@ export function bubbles(){
 	$('.project').each(function(){
 		$(this).on('click', function(){
 			$('.project').each(function(){
-				$(this).addClass('bottom-orbit');							
+				$(this).addClass('bottom-orbit');
 			})
 			$('#projects h1').addClass('bottom-orbit');
 		})
@@ -35,14 +35,14 @@ export function slide(n){
 }
 
 export function bars(){
-	var skills = ['230px','270px', '250px', '240px', '280px', '220px'];
+	var skills = ['280px','260px', '280px', '300px', '230px', '240px']; // skills heights
 	var d = 2300;
 	$('#languages').children('span').each(function(){
 
 		$($(this).children('span')[0]).each(function(){
 			$($(this).children('div')[0]).velocity({
 			height: skills.pop(),
-		}, {easing: 'easeOutQuart', delay: d})	
+		}, {easing: 'easeOutQuart', delay: d})
 		})
 		d += 100
 	})
@@ -53,25 +53,25 @@ export function button(){
 	    $(this).addClass('rubberBandLight').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
 	      $(this).removeClass('rubberBandLight')
 	    });
-	  })	
+	  })
 }
 
 export function rotate(){
           for( var x =0; x < 5; x++){
-    
+
               $($('.svg-container')[x]).velocity({
                 rotateZ: '0deg'
               }, {
                 easing: 'easeOutQuart',
                 delay: 2200
               })
-              
-          } 	
+
+          }
 }
 
 
 export function lines(){
-	  
+
 	var words = $($('#line').children('div')[0]).text().split('. ')
 	var words2 = $($('#line').children('div')[1]).text().split('. ')
 
@@ -86,9 +86,9 @@ export function lines(){
 
 	for(var x in words){
 		var t = document.createElement('span');
-		var newContent = document.createTextNode(words[x] + '. '); 
+		var newContent = document.createTextNode(words[x] + '. ');
 		t.appendChild(newContent);
-		spans.push(t); 
+		spans.push(t);
 
 	}
 	$('#line').html('<div><p></p></div>');
@@ -101,15 +101,15 @@ export function lines(){
 		$($('#line').children('div')[0]).prepend(spans[spans.length - x- 1] );
 	}
 
-	$($($('#line').children('div')[0]).children('p')[0]).append(document.createElement('p').appendChild(document.createTextNode('I hear it so much that sometimes that I actually start to believe my name it "You need to take a break".'))) 
+	$($($('#line').children('div')[0]).children('p')[0]).append(document.createElement('p').appendChild(document.createTextNode('I hear it so much that sometimes that I actually start to believe my name it "You need to take a break".')))
 
 var spans1 = [];
 
 	for(var x in words2){
 		var t = document.createElement('span');
-		var newContent = document.createTextNode(words2[x] + '. '); 
+		var newContent = document.createTextNode(words2[x] + '. ');
 		t.appendChild(newContent);
-		spans1.push(t); 
+		spans1.push(t);
 
 	}
 	$('#line').append('<div></div>');
@@ -123,7 +123,7 @@ var spans1 = [];
 		$($('#line').children('div')[1]).prepend(spans1[spans1.length - x- 1] );
 	}
 
-	  	
+
 
 }
 
@@ -132,10 +132,10 @@ export function anim(elem, charLength, del){
 
 		function update(){
 			$($(elem).children('span')[(Math.floor(Math.random() *charLength -1))]).mouseover();
-				
+
 				setTimeout(() => {
 					update();
-				}, Math.floor((Math.random() * 40000)/charLength))					
+				}, Math.floor((Math.random() * 40000)/charLength))
 		}
 
 		var d = del;
@@ -151,19 +151,19 @@ export function anim(elem, charLength, del){
 
 				});
 
-			
+
 		}
 
 		if(charLength > 0 && charLength < 200){
 
 		  for( var x =0; x < charLength; x++){
-	
+
 			 $($(elem).children('span')[x]).mouseover(function(){
 			    $(this).addClass('rubberBand').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
 			      $(this).removeClass()
 			    });
 			  })
-		  }	
+		  }
 
 		  update();
 		}
@@ -172,18 +172,18 @@ export function anim(elem, charLength, del){
 			    $(this).addClass('rubberBandLight').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
 			      $(this).removeClass()
 			    });
-			  })				
+			  })
 		}
 		else{
 			$(elem).mouseover(function(){
 			    $(this).addClass('rubberBand').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
 			      $(this).removeClass()
 			    });
-			  })			
+			  })
 		}
 
 
-			
+
 
 	}
 
@@ -191,4 +191,3 @@ export function anim(elem, charLength, del){
 		$('#hill').velocity({translateX: '-138px'}, {ease: 'easeOutQuart', delay: 2800});
 		$('#bug-lord').velocity({translateX: '-270px'}, {ease: 'easeOutQuart', delay: 2800});
 	}
-	

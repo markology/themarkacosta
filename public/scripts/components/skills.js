@@ -11,7 +11,7 @@ export class Skills extends React.Component{
 	componentDidMount(){
 		// anim($('#projects-link'), 0, 1900)
 		anim($('#skill-title'), 7, 1900)
-		anim($('#skills').children('p'), 379, 1900)		
+		anim($('#skills').children('p'), 379, 1900)
 		bars();
 		donuts();
 		rotate();
@@ -31,47 +31,47 @@ export class Skills extends React.Component{
 					<span>l</span>
 					<span>s</span>
 				</h1>
-				<p>Skillset is diverse. Experience building APIs, animations, modular plugins, CRUD operations, Etc.</p> 
-					<p>Supplementary experience in Adobe products, php, Python, JAVA, team leading and Agile work environments.  </p>
-					<p>Versed in git, linux, aws. I believe in constantly learning new technologies and building the ones you already know. Quick learner and treats every challenge as an opportunity. </p>
+				<p>Quick learner and self starter. Experience building APIs, animations, modular plugins, CRUD operations, Etc.</p>
+					<p>Supplementary experience in Adobe products, php, Python, JAVA, team leading and Agile work environments.</p>
+					<p>Versed in git, linux, aws. I believe in constantly learning new technologies and building the ones you already know. Always looking to innovate with scalability at the forefront. </p>
 				<div id="languages">
 					<span className="chart" id="coding-languages">
 						<span>
 							<div className="fancy-blue" ></div>
-							<p>AngularJS</p>						
+							<p>AngularJS</p>
 						</span>
-					</span>	
+					</span>
 					<span className="chart" id="coding-languages">
 						<span>
 							<div className="fancy-pink" ></div>
-							<p>Angular2</p>						
+							<p>Angular2</p>
 						</span>
-					</span>	
+					</span>
 					<span className="chart" id="coding-languages">
 						<span>
 							<div className="fancy-yellow"></div>
-							<p>ReactJS</p>						
+							<p>ReactJS</p>
 						</span>
-					</span>	
+					</span>
 					<span className="chart" id="coding-languages">
 						<span>
 							<div className="fancy-green"></div>
-							<p>NodeJS</p>						
+							<p>NodeJS</p>
 						</span>
-					</span>		
+					</span>
 					<span className="chart" id="coding-languages">
 						<span>
 							<div className="fancy-teal" ></div>
-							<p>jQuery</p>						
+							<p>jQuery</p>
 						</span>
-					</span>	
+					</span>
 					<span className="chart" id="coding-languages">
 						<span>
 							<div className="fancy-orange" ></div>
-							<p>Vanilla</p>						
+							<p>Vanilla</p>
 						</span>
-					</span>														
-				</div>	
+					</span>
+				</div>
 
 				<div id="basics">
 				    <div>
@@ -85,12 +85,12 @@ export class Skills extends React.Component{
 				    </div>
 				    <div>
 				        <div id="git"></div>
-				    </div>	
+				    </div>
 				    <div>
 				        <div id="gulp"></div>
-				    </div>					    			    				    				    
-				</div>										
-					</div>										
+				    </div>
+				</div>
+					</div>
 			</div>
 			)
 	}

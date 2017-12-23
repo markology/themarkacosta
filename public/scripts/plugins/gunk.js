@@ -1,4 +1,3 @@
-
 import particleground from './../../js/particle.js'
 
 
@@ -18,34 +17,34 @@ var Particle = function() {
 		  this.x = -b.state.W;
 		  this.y = -b.state.H;
 		  this.free = false;
-		  
+
 		  this.vy = -2 + parseInt(Math.random() * 10) / 2;
 		  this.vx = -4 + parseInt(Math.random() * 8);
-		  
+
 		  // Color
 		  this.a = Math.random();
 
-		  
+
 		  this.setPosition = function(x, y) {
 		    this.x = x ;
 		    this.y = y ;
 		  };
-		  
+
 		  this.draw = function() {
 		    b.state.ctx.fillStyle = "#fff";
 		    b.state.ctx.fillRect(this.x, this.y,  this.w ,  this.h );
 		  }
-		};  
+		};
   b.state.imageData = b.state.ctx.getImageData(0, 0, b.state.W,b.state. W);
   var data = b.state.imageData.data;
-  
+
   // Iterate each row and column
   for (var i = 0; i < b.state.imageData.height; i += b.state.density) {
     for (var j = 0; j < b.state.imageData.width; j += b.state.density) {
-      
+
       // Get the color of the pixel
       var color = data[((j * ( b.state.imageData.width * 4)) + (i * 4)) - 1];
-      
+
       // If the color is black, draw pixels
       if (color == 255) {
         b.state.particles.push(new Particle());
@@ -72,34 +71,34 @@ var Particle = function() {
 		  this.x = -b.state.W;
 		  this.y = -400;
 		  this.free = false;
-		  
+
 		  this.vy = -2 + parseInt(Math.random() * 20) / 4;
 		  this.vx = -4 + parseInt(Math.random() * 8);
-		  
+
 		  // Color
 		  this.a = Math.random();
 
-		  
+
 		  this.setPosition = function(x, y) {
 		    this.x = x - 250;
 		    this.y = y - 360;
 		  };
-		  
+
 		  this.draw = function() {
 		    b.state.ctx.fillStyle = "#fff";
 		    b.state.ctx.fillRect(this.x, this.y,  this.w ,  this.h );
 		  }
-		};  
+		};
   b.state.imageData = b.state.ctx.getImageData(0, 0, b.state.W,b.state. W);
   var data = b.state.imageData.data;
-  
+
   // Iterate each row and column
   for (var i = 0; i < b.state.imageData.height; i += b.state.density) {
     for (var j = 0; j < b.state.imageData.width; j += b.state.density) {
-      
+
       // Get the color of the pixel
       var color = data[((j * ( b.state.imageData.width * 4)) + (i * 4)) - 1];
-      
+
       // If the color is black, draw pixels
       if (color == 255) {
         b.state.particles.push(new Particle());
@@ -111,11 +110,11 @@ var Particle = function() {
 export  function gunk(b, refresh){
 
 	window.requestAnimFrame = (function(){
-		  return  window.requestAnimationFrame || 
-		    window.webkitRequestAnimationFrame || 
-		    window.mozRequestAnimationFrame    || 
-		    window.oRequestAnimationFrame      || 
-		    window.msRequestAnimationFrame     || 
+		  return  window.requestAnimationFrame ||
+		    window.webkitRequestAnimationFrame ||
+		    window.mozRequestAnimationFrame    ||
+		    window.oRequestAnimationFrame      ||
+		    window.msRequestAnimationFrame     ||
 		    function( callback ){
 		      window.setTimeout(callback, 1000 / 60);
 		    };
@@ -147,10 +146,10 @@ export  function gunk(b, refresh){
 		canvas.height =  800;
 		chip();
 
-		
+
 
 		// Particle Object
-		
+
 
 		b.state.particles = [];
 
@@ -170,9 +169,9 @@ export  function gunk(b, refresh){
 				      scaleX = canvas.width / rect.width,    // relationship bitmap vs. element for X
 				      scaleY = canvas.height / rect.height;  // relationship bitmap vs. element for Y
 
-			
+
 				        // been adjusted to be relative to element
-				  
+
 			  mouse.x =	(e.clientX - rect.left) * scaleX,   // scale mouse coordinates after they have
 
 			  mouse.y =(e.clientY - rect.top) * scaleY;
@@ -180,14 +179,14 @@ export  function gunk(b, refresh){
 		document.fonts.onloadingdone  =  ()  => {
 			drawText(b)
 			positionParticles(b);
-		};	
+		};
 		// Update
 		function update() {
 		  clear();
 		  var temp= Math.floor(Math.random()  * b.state.particles.length)
 
 		  // console.log(temp)
-		  
+
 		  for(var i = 0; i < b.state.particles.length; i++) {
 		    var p = b.state.particles[i];
 		    if(temp == i && funnel){
@@ -196,45 +195,45 @@ export  function gunk(b, refresh){
 		    	funnel = false;
 		    	p.vx = 0;
 		    }
-		    if(mouse.x > p.x -10 && mouse.x < p.x + 10 + p.w && mouse.y > p.y -10 && mouse.y < p.y + p.h + 10) 
+		    if(mouse.x > p.x -10 && mouse.x < p.x + 10 + p.w && mouse.y > p.y -10 && mouse.y < p.y + p.h + 10)
 		      hovered = true;
-		    
+
 		    if(hovered == true) {
-		      
+
 		      var dist = Math.sqrt((p.x - mouse.x)*(p.x - mouse.x) + (p.y - mouse.y)*(p.y - mouse.y));
-		      
+
 		      if(dist <= b.state.minDist)
 		        p.free = true;
-		      
+
 		      if(p.free == true) {
 		        p.y += p.vy;
 		        p.vy += 0.65;
 		        p.x += p.vx;
-		        
+
 		        // Collision Detection
 		        if(p.y + p.h > b.state.H) {
 		          p.y = b.state.H - p.h;
 		          p.vy *= -bounceFactor;
-		          
+
 		          // Friction applied when on the floor
 		          if(p.vx > 0)
 		            p.vx -= 0.1;
-		          else 
+		          else
 		            p.vx += 0.1;
 		        }
-		        
+
 		        if(p.x + p.w > b.state.W) {
 		          p.x = b.state.W - p.w;
 		          p.vx *= -bounceFactor;
 		        }
-		        
+
 		        if(p.x < 0) {
 		          p.x = 0;
 		          p.vx *= -0.5;
 		        }
 		      }
 		    }
-		    
+
 		    b.state.ctx.globalCompositeOperation = "lighter";
 		    p.draw();
 		  }
@@ -244,5 +243,5 @@ export  function gunk(b, refresh){
 		(function animloop(){
 		  requestAnimFrame(animloop);
 		  update();
-		})();		
-}  
+		})();
+}

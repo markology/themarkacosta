@@ -1,5 +1,3 @@
-
-
 #breadcrumb{
     color: #c1c1c1;
     font-family: La Belle Aurore;
@@ -7,7 +5,7 @@
     position: absolute;
     left: 100px;
     top: 0px;
-    z-index: 999;    
+    z-index: 999;
     text-transform: lowercase;
 }
 
@@ -19,7 +17,7 @@
     top: 0;
     z-index: 999;
     left: 0;
-    text-align: center;    
+    text-align: center;
     min-height: 500px;
     overflow: hidden;
 
@@ -30,7 +28,7 @@
 		    top: -41px;
 		    left: -20px;
 		    padding: 0;
-		    margin: 0;	
+		    margin: 0;
 
     	}
 
@@ -46,7 +44,7 @@
 		    /* z-index: 16; */
 		    background: #383838;
 		    border-radius: 100%;
-		    box-shadow: 4px 5px 13px #131313;    		
+		    box-shadow: 4px 5px 13px #131313;
     	}
 
     }
@@ -68,10 +66,10 @@
 	    		}
 	    	}
 		    i{
-		    	font-size: 1.5rem;	
+		    	font-size: 1.5rem;
 		    	display:block;
 		    	height: 100%;
-    			color: #616161;		    	    	
+    			color: #616161;
 	    	}
 	    	span{
 			    font-size: .75rem;
@@ -86,7 +84,7 @@
 			    font-family: pier;
 			    font-weight: 100;
 	    	}
-	    }    	
+	    }
     }
     #socials{
 	    display: block;
@@ -95,7 +93,7 @@
 	    li{
 			cursor:pointer;
 		    height: 40px;
-		    position: relative;	    	
+		    position: relative;
 	    	&:hover{
 	    		i{
 	    			color: #6ee3ff;
@@ -110,9 +108,9 @@
 			    display: block;
 			    height: 100%;
 			    color: #616161;
-			    margin-left: 6px;	    	    	
+			    margin-left: 6px;
 	    	}
-	    }	        	
+	    }
     }
 	ul{
 		list-style: none;
@@ -122,30 +120,30 @@
 
 				a span{
 					opacity: 1;
-		    		color: #6ee3ff!important;					
-					transition: opacity .3s ease, color .4s ease;								
-				}	
+		    		color: #6ee3ff!important;
+					transition: opacity .3s ease, color .4s ease;
+				}
 
 				a i{
 					opacity: 0;
-	    			color: #6ee3ff!important;		    	    	
+	    			color: #6ee3ff!important;
 
-					transition: opacity .3s ease, color .4s ease;		
-				}		
-			}			
+					transition: opacity .3s ease, color .4s ease;
+				}
+			}
 			a{
 				text-decoration: none;
 				i{
 					opacity:1;
-		    		color: #6ee3ff;					
+		    		color: #6ee3ff;
 					transition: opacity .3s ease, color .4s ease;
-					display: block;					
+					display: block;
 				}
 				span{
 					opacity: 0;
-	    			color: #616161;		    	    		
+	    			color: #616161;
 					transition: opacity .3s ease, color .4s ease;
-				
+
 				}
 			}
 		}
